@@ -1,0 +1,332 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "dealer",
+  "screen_code": "DL_014",
+  "screen_name": "입찰상세(미낙찰)",
+  "page_number": 15,
+  "source_spec": "sdd/01_planning/02_screen/ir/dealer/dealer_screen_spec.pdf",
+  "surface_id": "page-015-surface-01",
+  "primary_route": "/dealer/bids/:vehicleId/detail/lost",
+  "access": "role:DEALER",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "dealer-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "dealer-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/dealer/DL_014",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/dealer/DL_014/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/dealer/DL_014/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/dealer/DL_014/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/dealer/DL_014/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "입찰 결과 패널",
+      "lines": [
+        "서버 기준 내 입찰가 / 최종 낙찰가 / 입찰 마감 시각 / 결",
+        "과를 고정 표시함.",
+        "상단 상태 태그는 마감 고정 노출됨.",
+        "결과 영역에 “이번 입찰에서 낙찰되지 않았습니다.” 메시",
+        "지 노출됨.",
+        "본 상태에서는 모든 입찰 관련 액션 완전 차단됨."
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "유사 매물 보기",
+      "lines": [
+        "클릭 시 현재 매물과 차종·연식·가격대 기준으로 유사 매",
+        "물 목록 화면(DL_003)으로 이동.",
+        "해당 매물은 더 이상 재입찰 대상에 포함되지 않음."
+      ],
+      "matched_block_ids": [
+        "detail-identity"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "detail-identity"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

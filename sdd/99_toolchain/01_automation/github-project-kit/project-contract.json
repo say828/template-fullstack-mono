@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "owner": "example",
+  "project_number": 2,
+  "project_title": "template",
+  "project_id": "PVT_kwDODofnSc4BP88W",
+  "project_url": "https://github.com/orgs/example/projects/2",
+  "repository": "example/template",
+  "default_branch": "main",
+  "fields": {
+    "status": {
+      "id": "PVTSSF_lADODofnSc4BP88Wzg-NjFI",
+      "name": "Status",
+      "options": {
+        "todo": "f75ad846",
+        "in_progress": "47fc9ee4",
+        "in_review": "4fe74eff",
+        "done": "98236657"
+      }
+    },
+    "priority": {
+      "id": "PVTSSF_lADODofnSc4BP88Wzg-NjMg",
+      "options": {
+        "P0": "b06b583e",
+        "P1": "1b747c1d",
+        "P2": "f0099340"
+      }
+    },
+    "size": {
+      "id": "PVTSSF_lADODofnSc4BP88Wzg-NjMk",
+      "options": {
+        "XS": "987a7e35",
+        "S": "9850c40d",
+        "M": "2aa99f0a",
+        "L": "03af2d09",
+        "XL": "e17d0ce7"
+      }
+    },
+    "agent_role": {
+      "id": "PVTF_lADODofnSc4BP88WzhBXP5U",
+      "name": "Agent Role"
+    }
+  },
+  "role_label_prefix": "role:",
+  "structured_comment_prefix": "<!-- agentic-project-log -->"
+}

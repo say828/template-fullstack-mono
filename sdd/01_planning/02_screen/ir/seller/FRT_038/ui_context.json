@@ -1,0 +1,338 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "seller",
+  "screen_code": "FRT_038",
+  "screen_name": "계정정보",
+  "page_number": 39,
+  "source_spec": "sdd/01_planning/02_screen/ir/seller/seller_screen_spec.pdf",
+  "surface_id": "page-039-surface-01",
+  "primary_route": "/settings/account",
+  "access": "role:SELLER",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "seller-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "seller-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/seller/FRT_038",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/seller/FRT_038/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/seller/FRT_038/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/seller/FRT_038/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/seller/FRT_038/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "설정 메뉴 / 좌측 네비게이션 영역",
+      "lines": [
+        "상단 GNB에서 설정 진입 시 본 화면 기본 진입 위치로 고",
+        "정됨.",
+        "좌측 메뉴는 계정 정보가 선택 상태로 표시되며, 동일 영",
+        "역에서 정산 계좌 / 알림 설정 / 보안·비밀번호 / 언어 및",
+        "지역 / 약관 및 회원탈퇴 이동 경로 제공됨.",
+        "본 화면에서 입력된 정보가 저장되지 않은 상태에서 타",
+        "메뉴 이동 시 변경 데이터 유지 불가 상태로 처리됨(저장",
+        "전 이탈 시 입력값 폐기)."
+      ],
+      "matched_block_ids": [
+        "header",
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "계정 기본 정보 영역",
+      "lines": [
+        "판매자 계정의 식별 기준 정보 블록으로 구성됨.",
+        "프로필 이미지, 계정 표시명, 로그인 이메일 정보가 함께",
+        "노출됨.",
+        "이름·이메일은 가입 시점 식별 정보로 고정, 본 화면에서",
+        "수정 불가 상태 유지됨."
+      ],
+      "matched_block_ids": [
+        "screen-action",
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "연락처 정보 입력 영역",
+      "lines": [
+        "판매자의 거래·정산·서류 발송·운영 연락 기준 데이터 입",
+        "력 영역으로 구성됨.",
+        "휴대폰 번호",
+        "• 판매자 공식 연락 수단 기준값으로 저장됨.",
+        "• 딜러·평가사·고객센터가 해당 번호를 기준으로 모든 거",
+        "래 연락을 수행함.",
+        "• 입력 형식 불일치 시 저장 불가 상태로 전환됨.",
+        "국가",
+        "• 단일 선택 드롭다운.",
+        "• 선택 국가에 따라 거주 지역 선택 후보가 재구성됨.",
+        "거주 지역(광역 / 하위)",
+        "• 2단 선택 구조.",
+        "• 국가 변경 시 기존 선택값이 무효가 되는 경우 자동 초",
+        "기화됨.",
+        "• 필수 입력 항목으로, 미선택 시 저장 불가 상태 유지",
+        "본 영역의 정보는 이후 생성되는 모든 거래·정산·서류 처",
+        "리의 기준 데이터로 즉시 반영됨."
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "저장 처리 버튼",
+      "lines": [
+        "저장 버튼 클릭 시 다음 조건을 모두 충족해야 저장 가능",
+        "상태 유지됨. (휴대폰 번호 형식 유효 / 국가 선택 완료 /",
+        "거주 지역(광역/하위) 선택 완료)",
+        "조건 미충족 시 저장 차단 상태 유지, 오류 기준 필드 단위",
+        "로 피드백 노출",
+        "저장 완료 시 해당 시점부터 모든 거래·정산·서류 처리에",
+        "신규 기준값 적용.",
+        "저장 전까지는 기존 기준 데이터 유지됨."
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "header",
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "screen-action",
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-2",
+          "REQ-4"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

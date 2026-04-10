@@ -1,0 +1,438 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "dealer",
+  "screen_code": "DL_026",
+  "screen_name": "거래결제상세(인도진행)",
+  "page_number": 27,
+  "source_spec": "sdd/01_planning/02_screen/ir/dealer/dealer_screen_spec.pdf",
+  "surface_id": "page-027-surface-01",
+  "primary_route": "/dealer/transactions/:vehicleId/detail/delivery",
+  "access": "role:DEALER",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "dealer-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "dealer-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/dealer/DL_026",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/dealer/DL_026/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/dealer/DL_026/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/dealer/DL_026/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/dealer/DL_026/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "감가 협의 결과 영역",
+      "lines": [
+        "판매자가 감가 제안을 승인하여 최종 감가 금액이 확정된",
+        "거래 요약 영역",
+        "감가 확정 금액: 판매자 승인 기준 최종 감가 합계 금액",
+        "최종 거래가: 낙찰가 − 확정 감가 금액",
+        "해당 값들은 이후 인도·송금·정산의 기준 금액으로 고정",
+        "되며 변경 불가",
+        "[감가 협의 내역보기] 버튼 클릭 시 (DL_027) 화면 호출"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "인도 일정 등록 영역",
+      "lines": [
+        "딜러가 판매자와 1차 통화 후 확정한 인도 일정을 등록하",
+        "는 입력 영역",
+        "입력 항목: 인도일자, 인도 시간, 인도 장소, 판매자 연락",
+        "확인",
+        "판매자 연락처 : 판매자 회원 정보에 등록된 대표 연락처",
+        "인도 일자/시간 : 실제 차량·서류 인수 예정 시점",
+        "차량 인도 장소 : 차량 실물 인수 장소",
+        "인도 일정 미등록 상태에서는 하위 영역(인도 진행 상태/",
+        "체크리스트/완료 버튼) 전부 비활성"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "인도 일정 등록 버튼",
+      "lines": [
+        "입력된 인도 일정을 거래에 확정 반영",
+        "등록 즉시 거래 단계는 인도 진행 상태로 전환",
+        "등록 시 하위 영역(인도 진행상태/체크리스트) 활성화"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "인도 진행 상세 영역",
+      "lines": [
+        "인도 방식, 체크리스트, 필수 확인 항목 표시",
+        "체크리스트 미완료 시 인도 완료 처리 불가",
+        "사진 첨부",
+        "차량 인도 사진",
+        "서류 인수 사진",
+        "파일 조건: PNG/JPG/PDF / 각 최대 5MB"
+      ],
+      "matched_block_ids": [
+        "detail-hero",
+        "detail-info"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "인도 완료 처리 버튼",
+      "lines": [
+        "인도 과정이 모두 완료되었음을 확정하는 기능",
+        "클릭 시 인도 완료 처리 및 거래 단계 송금/정산 단계로",
+        "전환"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-6",
+      "number": "6",
+      "heading": "거래 요약 패널",
+      "lines": [
+        "차량 정보, 낙찰가, 감가 확정 금액, 최종 거래가, 현재 거",
+        "래 단계 표시",
+        "모든 금액 및 단계 상태는 상단 진행 스텝과 실시간 동기",
+        "화",
+        "인도 완료 처리가 되었습니다.",
+        "확인"
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "detail-hero",
+          "detail-info"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-6",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2",
+          "REQ-3",
+          "REQ-5"
+        ]
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": [
+          "REQ-4"
+        ]
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": [
+          "REQ-6"
+        ]
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": [
+          "REQ-4"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

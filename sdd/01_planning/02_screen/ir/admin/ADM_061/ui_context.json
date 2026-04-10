@@ -1,0 +1,270 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_061",
+  "screen_name": "권한그룹수정등록",
+  "page_number": 62,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-062-surface-01",
+  "primary_route": "/admin/permissions/:groupCode",
+  "access": "role:ADMIN",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_061",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_061/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_061/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_061/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_061/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "권한 그룹 기본 정보 입력 영역",
+      "lines": [
+        "권한 그룹 이름",
+        "관리자 계정에 할당되는 권한 묶음의 식별 키",
+        "시스템 내 중복 불가",
+        "목록·권한 매트릭스·관리자 배정 기준값으로 사용",
+        "설명",
+        "해당 권한 그룹의 역할·책임 범위에 대한 운영 설명",
+        "관리자 배정 판단 참고용 정보",
+        "외부 노출 없음, 내부 운영 관리 목적 데이터",
+        "사용 여부",
+        "사용: 관리자 계정에 배정 가능 상태",
+        "미사용: 신규 배정 불가 상태",
+        "권한 관리 메인 목록의 사용/미사용 배지 표시 기준"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "취소",
+      "lines": [
+        "입력 내용 저장 없이 팝업 종료",
+        "신규 생성 상태에서 취소 시: 그룹 생성 없음",
+        "수정 상태에서 취소 시: 기존 그룹 정보 유지"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "저장",
+      "lines": [
+        "현재 입력된 그룹 정보를 권한 그룹 기준 데이터로 확정",
+        "저장 성공 시 처리 결과",
+        "신규: 좌측 권한 그룹 목록에 즉시 추가",
+        "수정: 기존 그룹 카드 정보 즉시 갱신",
+        "이후 권한 매트릭스 편집 가능 상태로 전환"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-2",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

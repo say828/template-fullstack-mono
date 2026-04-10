@@ -1,0 +1,290 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_052",
+  "screen_name": "공지사항등록",
+  "page_number": 53,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-053-surface-01",
+  "primary_route": "/admin/support/notices",
+  "access": "role:ADMIN",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_052",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_052/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_052/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_052/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_052/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "공지 작성 영역(제목/본문/노출 정보)",
+      "lines": [
+        "공지 1건의 확정 데이터를 구성하는 입력 구간.",
+        "제목 입력",
+        "공지 목록의 ‘제목’ 컬럼 및 공지 상세 상단 제목으로",
+        "동일 노출되는 대표 텍스트.",
+        "제목 미입력 상태에서는 저장 확정 불가로 취급(필수",
+        "값).",
+        "본문 입력(서식 편집)",
+        "사용자 공지 상세에서 그대로 렌더링되는 확정 콘텐",
+        "츠.",
+        "줄바꿈/목록/강조/링크/이미지(아이콘 존재) 등 서식",
+        "요소는 편집 결과 그대로 유지되는 것을 기본값으로",
+        "취급.",
+        "노출 채널(드롭다운)",
+        "공지를 노출할 사용자 집합을 결정하는 최상위 분기",
+        "값.",
+        "선택값에 따라 사용자 공지 목록에 포함되는 대상이",
+        "결정됨(전체/딜러/판매자).",
+        "채널 미선택 상태 저장 불가(필수값)로 취급.",
+        "카테고리(드롭다운)",
+        "사용자 공지 화면에서의 분류 기준.",
+        "채널과 결합되어 사용자 측 필터/탭 구성에 영향",
+        "노출 여부(라디오)",
+        "‘노출’ 확정 시 즉시 사용자 공지 목록의 노출 대상 포",
+        "함.",
+        "‘미노출’ 확정 시 사용자 측에서는 접근 불가 상태로",
+        "유지되며, 어드민 목록에서는 관리 대상으로만 유지",
+        "등록/수정 모드 공통 처리",
+        "등록 모드: 모든 입력값 공란 초기화(필수값 미선택",
+        "상태).",
+        "수정 모드: 기존 공지의 확정값이 그대로 채워진 상태",
+        "로 진입, 변경된 값만 저장 시 반영.",
+        "수정 모드에서 ‘작성자/수정일’은 목록에서 별도 갱신",
+        "됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "취소",
+      "lines": [
+        "편집 종료 및 직전 화면(공지 목록 또는 공지 상세) 복귀",
+        "트리거.",
+        "취소 시 입력 중 변경사항은 확정되지 않은 것으로 취급."
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "저장",
+      "lines": [
+        "공지 등록/수정의 확정 트리거.",
+        "저장 확정 시 공지 데이터가 최종 반영되고, 공지 목록/상",
+        "세 및 사용자 공지 화면 노출 대상이 갱신됨.",
+        "저장 완료 후 공지 상세 화면으로 전환"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

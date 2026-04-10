@@ -1,0 +1,310 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_029",
+  "screen_name": "인도관리",
+  "page_number": 30,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-030-surface-01",
+  "primary_route": "/admin/deliveries",
+  "access": "role:ADMIN",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_029",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_029/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_029/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_029/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_029/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "인도 필터 / 조회 조건 영역",
+      "lines": [
+        "본 영역은 인도 프로세스의 상태 단계를 기준으로 거래",
+        "집합을 선별하는 필터영역.",
+        "일정 상태",
+        "• 일정 대기: 인도 일정 미등록 상태",
+        "• 일정 확정: 인도 일정이 등록·확정된 상태",
+        "인도 상태",
+        "• 인도 대기: 일정은 확정되었으나 실제 인도 미완료",
+        "• 승인 대기: 딜러·판매자 양측 인도 완료 확인이 제출되",
+        "어 관리자 승인만 남은 상태",
+        "• 인도 완료: 관리자 승인까지 완료되어 인도 프로세스",
+        "종결 상태",
+        "기간 필터는 거래의 최종 업데이트 시각 기준으로 조회",
+        "범위를 제한함.",
+        "검색 필드는 거래ID / 차량번호 / 판매자 / 딜러 기준 부",
+        "분 일치 조회 수행.",
+        "모든 필터 조건 변경은 즉시 서버 조회 기준으로 반영됨."
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "인도 상태 집계 영역",
+      "lines": [
+        "본 영역의 수치는 현재 필터 조건이 적용된 거래 집합 기",
+        "준 실시간 집계값임.",
+        "• 각 수치는 인도 프로세스의 병목 지점을 운영자가 즉시",
+        "파악하기 위한 운영 KPI로 사용됨.",
+        "집계 기준:",
+        "• 일정 대기: 인도 일정 레코드 미존재 거래 수",
+        "• 인도 대기: 일정 확정 후, 어느 한쪽이라도 인도 완료 미",
+        "확인 상태 거래 수",
+        "• 승인 대기: 딜러·판매자 인도 완료 확인 모두 존재 + 관",
+        "리자 승인 미완료 거래 수",
+        "• 인도 완료: 관리자 승인 완료 상태 거래 수",
+        "• 지연: SLA 기준 초과 거래 수"
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "인도 거래 리스트",
+      "lines": [
+        "각 행은 1건의 거래(거래ID 기준)이며 인도 프로세스의",
+        "단일 관리 단위임.",
+        "리스트행 클릭 시 해당하는 거래의 인도관리상세",
+        "(ADM_030 등) 화면으로 이동",
+        "거래ID",
+        "• 거래 생성 시 서버 발급 고유 키",
+        "차량 정보",
+        "• 차종 / 연식 / 주행거리 요약 데이터",
+        "• 차량 식별 및 현장 인도 확인 기준 정보",
+        "판매자 / 딜러",
+        "• 인도 책임 주체 식별 기준 사용자",
+        "인도 일정",
+        "• 인도 일정 확정 시점의 날짜·시각",
+        "• 일정 미확정 시 공란 유지",
+        "일정 상태",
+        "• 일정 대기 / 일정 확정 상태값",
+        "• 인도 프로세스의 선행 조건 여부 판단 기준",
+        "인도 상태",
+        "• 인도 대기 / 승인 대기 / 인도 완료 상태값",
+        "• 인도 프로세스의 현재 단계 식별 핵심 필드",
+        "증빙 제출",
+        "• 딜러·판매자 인도 증빙 제출 여부 상태",
+        "• 승인 가능 여부 판단 선행 조건",
+        "SLA",
+        "• 인도 기준 시한 대비 초과 여부",
+        "• 지연 판단 및 운영 리스크 지표",
+        "최종 업데이트",
+        "• 인도 관련 이벤트 발생 최종 시각",
+        "• 정렬·운영 판단 기준 타임스탬프"
+      ],
+      "matched_block_ids": [
+        "filter-bar",
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "filter-bar",
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

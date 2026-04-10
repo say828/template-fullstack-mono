@@ -1,0 +1,336 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_060",
+  "screen_name": "관리자권한관리",
+  "page_number": 61,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-061-surface-01",
+  "primary_route": "/admin/permissions",
+  "access": "role:ADMIN",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_060",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_060/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_060/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_060/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_060/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "권한 그룹 추가",
+      "lines": [
+        "신규 관리자 권한 그룹 생성을 위한 진입 버튼",
+        "클릭 시 권한 그룹 추가 팝업(ADM_061)을 호출함"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "권한 그룹 목록",
+      "lines": [
+        "현재 시스템에 등록된 관리자 권한 그룹 목록",
+        "각 항목은 하나의 관리자 권한 정책 단위로 동작함",
+        "권한 그룹 선택 시 우측 권한 설정 영역이 해당 그룹 기준",
+        "으로 갱신됨"
+      ],
+      "matched_block_ids": [
+        "filter-bar",
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "권한 그룹 수정",
+      "lines": [
+        "클릭 시 선택된 권한 그룹의 수정(ADM_061) 화면을 호",
+        "출함",
+        "권한 그룹명, 설명 등 메타 정보 수정 용도로 사용됨",
+        "권한 자체 변경은 우측 권한 설정 영역에서 수행됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "권한 그룹 삭제",
+      "lines": [
+        "선택된 권한 그룹 삭제 기능",
+        "해당 권한 그룹이 어느 관리자 계정에도 할당되어 있지",
+        "않은 경우에만 삭제 가능",
+        "사용 중인 권한 그룹은 삭제 불가 상태로 유지됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "권한 설정 영역",
+      "lines": [
+        "선택된 권한 그룹에 대한 메뉴 단위 권한 설정 영역",
+        "각 행은 하나의 관리자 메뉴 단위를 의미함",
+        "조회 권한: 메뉴 접근 및 정보 조회 가능 여부",
+        "등록/수정 권한: 데이터 생성 및 수정 가능 여부",
+        "삭제 권한: 데이터 삭제 가능 여부",
+        "설정 권한: 정책·설정 변경 가능 여부",
+        "체크 상태에 따라 해당 권한 그룹의 접근 범위가 정의됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-6",
+      "number": "6",
+      "heading": "저장",
+      "lines": [
+        "현재 선택된 권한 그룹의 권한 설정 저장",
+        "저장 시 해당 권한 그룹에 소속된 관리자 계정에 변경된",
+        "권한 정책이 일괄 적용됨",
+        "저장 전까지 변경 사항은 임시 상태로 유지됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "filter-bar",
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-6",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-3",
+          "REQ-4",
+          "REQ-5",
+          "REQ-6"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

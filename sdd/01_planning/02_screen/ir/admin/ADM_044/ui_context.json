@@ -1,0 +1,273 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_044",
+  "screen_name": "반려처리",
+  "page_number": 45,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-045-surface-01",
+  "primary_route": "/admin/dealers/:dealerId",
+  "access": "role:ADMIN",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_044",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_044/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_044/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_044/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_044/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "반려 사유 입력 영역",
+      "lines": [
+        "반려 확정의 선행 조건을 충족시키는 핵심 입력 영역.",
+        "반려 처리 안내 배너는 “반려 사유 입력이 필수”임을 고지",
+        "하며, 작성 내용이 딜러에게 그대로 전달되는 성격임을",
+        "명확히 노출.",
+        "입력값은 반려 확정 시점에만 확정 저장되며, 확정 이전",
+        "에는 임시 입력 상태로 취급.",
+        "줄바꿈/서식(굵게/기울임/밑줄/목록)/링크/이미지 삽입",
+        "등 편집 기능이 제공되는 구성(툴바 노출 기준)"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "취소 버튼",
+      "lines": [
+        "반려 확정을 취소하고, 딜러 상세 패널(승인대기)로 복귀",
+        "시키는 종료 트리거.",
+        "클릭 시 입력된 반려 사유는 확정되지 않은 상태로 취급",
+        "되며, 저장 없이 팝업 종료"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "반려 확정 버튼",
+      "lines": [
+        "반려 사유를 확정 저장하고 딜러 반려 처리를 완료시키는",
+        "최종 트리거.",
+        "클릭 시 1번 입력값 필수 충족 여부 및 메일 발송 대상(딜",
+        "러 이메일)의 존재 여부 검증",
+        "확정 처리 시",
+        "딜러 상태: 승인대기 → 반려 전환",
+        "반려 사유: 반려 이력에 확정 값으로 저장",
+        "반려 안내 메일: 반려 사유 포함하여 딜러 이메일로",
+        "발송",
+        "화면 반영: 팝업 닫힘과 동시에 딜러 상세 패널/목록",
+        "의 상태 및 노출 버튼이 반려 기준으로 갱신"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-2",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

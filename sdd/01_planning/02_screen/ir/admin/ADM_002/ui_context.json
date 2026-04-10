@@ -1,0 +1,394 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_002",
+  "screen_name": "비밀번호찾기",
+  "page_number": 3,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-003-surface-01",
+  "primary_route": "/forgot-password",
+  "access": "public",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_002",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_002/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_002/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_002/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_002/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 11,
+    "ordered_tokens": [
+      "logo",
+      "top bar",
+      "reset card",
+      "reset title",
+      "guide text",
+      "email label",
+      "email input",
+      "role selector",
+      "send button",
+      "support note"
+    ],
+    "blocks": [
+      {
+        "id": "logo",
+        "token": "logo",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 4,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 4,
+            "width": 4
+          }
+        ]
+      },
+      {
+        "id": "top-bar",
+        "token": "top bar",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 5,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 5,
+            "column_end": 24,
+            "width": 20
+          }
+        ]
+      },
+      {
+        "id": "reset-card",
+        "token": "reset card",
+        "row_start": 3,
+        "row_end": 9,
+        "column_start": 7,
+        "column_end": 18,
+        "segment_count": 12,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 7,
+            "column_end": 18,
+            "width": 12
+          },
+          {
+            "row": 4,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 5,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 5,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 6,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 6,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 7,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 7,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 8,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 8,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 9,
+            "column_start": 7,
+            "column_end": 18,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "reset-title",
+        "token": "reset title",
+        "row_start": 4,
+        "row_end": 4,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "guide-text",
+        "token": "guide text",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "email-label",
+        "token": "email label",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 9,
+        "column_end": 10,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 9,
+            "column_end": 10,
+            "width": 2
+          }
+        ]
+      },
+      {
+        "id": "email-input",
+        "token": "email input",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 11,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 11,
+            "column_end": 16,
+            "width": 6
+          }
+        ]
+      },
+      {
+        "id": "role-selector",
+        "token": "role selector",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "send-button",
+        "token": "send button",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "support-note",
+        "token": "support note",
+        "row_start": 10,
+        "row_end": 10,
+        "column_start": 7,
+        "column_end": 18,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 10,
+            "column_start": 7,
+            "column_end": 18,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "아이디(이메일) 입력 필드",
+      "lines": [
+        "어드민 계정 생성 시 등록한 이메일 주소를 입력하는 필",
+        "드",
+        "입력된 이메일은 어드민 DB와 매칭하여 계정 존재 여부",
+        "를 확인하며, 유효한 이메일 형식이 아닐 경우 즉시 오류",
+        "메시지를 노출함"
+      ],
+      "matched_block_ids": [
+        "logo"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "비밀번호 찾기 버튼",
+      "lines": [
+        "입력한 이메일이 어드민 DB에 존재할 경우, 해당 이메일",
+        "로 임시 비밀번호 설정 링크를 발송함",
+        "발송 성공 시 \"임시 비밀번호가 이메일로 발송되었습니",
+        "다\" 메시지 표시",
+        "발송 실패(등록되지 않은 이메일) 시 \"등록되지 않은 이메",
+        "일 주소입니다\" 메시지 표시",
+        "발송된 비밀번호는 로그인 후 반드시 변경하도록 유도",
+        "임시 비밀번호로 최초 로그인 시 로그인 완료 직후 비밀",
+        "번호 변경 팝업이 자동 호출됨",
+        "임시 비밀번호 생성: 8자 이상의 랜덤 문자열 생성 후 암",
+        "호화 저장",
+        "확인"
+      ],
+      "matched_block_ids": [
+        "send-button"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "logo"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "send-button"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "logo",
+        "token": "logo",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "top-bar",
+        "token": "top bar",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "reset-card",
+        "token": "reset card",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "reset-title",
+        "token": "reset title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "guide-text",
+        "token": "guide text",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "email-label",
+        "token": "email label",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "email-input",
+        "token": "email input",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "role-selector",
+        "token": "role selector",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "send-button",
+        "token": "send button",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "support-note",
+        "token": "support note",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UIParityProofResult",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "service",
+    "adapter_path",
+    "contract_path",
+    "target_base_url",
+    "default_viewport",
+    "screens",
+    "summary"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "adapter_path": {
+      "type": "string"
+    },
+    "contract_path": {
+      "type": "string"
+    },
+    "target_base_url": {
+      "type": "string"
+    },
+    "default_viewport": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "number" },
+        "height": { "type": "number" }
+      }
+    },
+    "screens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "route", "status", "diff_ratio"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": ["string", "null"] },
+          "route": { "type": "string" },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "status": { "type": "string" },
+          "diff_ratio": { "type": "number" },
+          "max_diff_ratio": { "type": "number" },
+          "reference_image": { "type": ["string", "null"] },
+          "actual_image": { "type": ["string", "null"] },
+          "diff_image": { "type": ["string", "null"] },
+          "detail": { "type": "string" },
+          "target_url": { "type": "string" }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["total", "passed", "failed", "missing_reference", "capture_error", "matched"],
+      "properties": {
+        "total": { "type": "number" },
+        "passed": { "type": "number" },
+        "failed": { "type": "number" },
+        "missing_reference": { "type": "number" },
+        "capture_error": { "type": "number" },
+        "matched": { "type": "boolean" }
+      }
+    }
+  }
+}

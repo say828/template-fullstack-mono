@@ -1,0 +1,429 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "seller",
+  "screen_code": "FRT_013",
+  "screen_name": "내차량",
+  "page_number": 14,
+  "source_spec": "sdd/01_planning/02_screen/ir/seller/seller_screen_spec.pdf",
+  "surface_id": "page-014-surface-01",
+  "primary_route": "/seller/vehicles",
+  "access": "role:SELLER",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "seller-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "seller-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/seller/FRT_013",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/seller/FRT_013/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/seller/FRT_013/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/seller/FRT_013/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/seller/FRT_013/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "새 차량 등록하기 버튼",
+      "lines": [
+        "우측 상단에 고정 노출됨.",
+        "클릭 시 차량 등록 화면(FRT_033) 으로 전환됨.",
+        "차량 등록 완료 후 본 화면 복귀 시 신규 차량 카드가 목록",
+        "최상단에 추가됨.",
+        "신규 차량의 거래 상태는 입찰대기로 확정되어 상태 태그",
+        "가 즉시 반영됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "거래 상태 필터 영역",
+      "lines": [
+        "‘전체 / 입찰 중 / 입찰 마감 / 검차 / 감가 협의 / 인도·정",
+        "산 / 거래 완료’ 탭 노출됨.",
+        "선택 탭은 활성 컬러로 구분 노출됨.",
+        "탭 선택 시 해당 상태에 해당하는 차량만 목록에 노출됨.",
+        "탭 변경 시 목록은 초기화 후 재조회되며 스크롤 위치는",
+        "최상단으로 이동됨."
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "차량 카드 목록 영역",
+      "lines": [
+        "판매자가 등록한 차량이 카드 형태로 무한 스크롤 방식으",
+        "로 노출됨.",
+        "각 카드에는 대표 이미지, 차량명, 연식, 주행거리, 연료,",
+        "최고 입찰가, 입찰 건수, 거래 상태 태그, 상태 요약 정보",
+        "가 고정 구조로 노출됨.",
+        "거래 상태 태그는 상태값에 따라 컬러·텍스트가 분기 노",
+        "출되며, 해당 값은 이후 이동할 상세 화면 분기의 단일 기",
+        "준값으로 사용됨."
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "상세보기 버튼",
+      "lines": [
+        "모든 차량 카드에 공통 노출됨.",
+        "클릭 시 해당 차량의 현재 거래 상태 기준 상세 화면으로",
+        "전환됨.",
+        "전환 대상 화면은 상태값 기준으로 자동 분기됨.",
+        "(FRT_014 등)"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "입찰 현황 버튼",
+      "lines": [
+        "차량 상태가 입찰중일 때만 노출됨.",
+        "클릭 시 입찰 현황 상세 화면(FRT_016)으로 전환됨.",
+        "입찰 진행 상태가 아닐 경우 미노출됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-6",
+      "number": "6",
+      "heading": "감가 내용 확인 버튼",
+      "lines": [
+        "차량 상태가 감가 협의일 때만 노출됨.",
+        "클릭 시 감가 협의 상세 화면(FRT_028)으로 전환됨."
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-7",
+      "number": "7",
+      "heading": "검차 일정 확인 버튼",
+      "lines": [
+        "차량 상태가 검차일 때만 노출됨.",
+        "검차 일정이 확정되지 않고, 검차 일정 요청이 들어왔을",
+        "경우에 클릭 시 검차 일정 확인 화면(FRT_020)을 호출함",
+        "검차 일정 요청이나 확정된 검차 일정이 없을 경우, 해당",
+        "버튼 비활성화 처리",
+        "검차 일정이 확정된 경우, 클릭 시 검차일정상세",
+        "(FRT_023) 화면을 호출함"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-8",
+      "number": "8",
+      "heading": "입찰자 선택하기 버튼",
+      "lines": [
+        "차량 상태가 입찰 마감일 때만 노출됨.",
+        "클릭 시 입찰자 선택 화면(FRT_018)으로 전환됨."
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-9",
+      "number": "9",
+      "heading": "정산 확인 버튼",
+      "lines": [
+        "차량 상태가 인도·정산일 때만 노출됨.",
+        "클릭 시 인도정산진행(FRT_030) 화면으로 전환됨."
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-6",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-7",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-8",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-9",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-4",
+          "REQ-5",
+          "REQ-6",
+          "REQ-7",
+          "REQ-8",
+          "REQ-9"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

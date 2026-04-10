@@ -1,0 +1,79 @@
+{
+  "baseUrl": "http://127.0.0.1:3003",
+  "route": "/signup",
+  "specScreen": "FRT_005",
+  "specPreview": "/home/sh/Documents/Github/template-fullstack-mono/sdd/01_planning/02_screen/guidelines/assets/seller/page-006-surface-01.png",
+  "dom": {
+    "pathname": "/signup",
+    "headerLinks": [
+      "Template",
+      "로그인",
+      "회원가입"
+    ],
+    "brand": "Template",
+    "tagline": "글로벌 중고차 경매 플랫폼",
+    "title": "회원가입 유형 선택",
+    "subtitle": "Template를 어떤 역할로 이용하실 건가요?",
+    "cards": [
+      {
+        "kind": "seller",
+        "title": "판매자로 가입하기",
+        "description": "내 차량을 등록하고 국내·해외 딜러의 입찰을 받을 수 있습니다.",
+        "points": [
+          "차량번호 자동 조회",
+          "입찰가 비교 / 감가 협의 / 정산 지원",
+          "검차+수출 연동 서비스 제공"
+        ],
+        "note": null,
+        "cta": "판매자로 가입하기",
+        "x": 340,
+        "y": 331,
+        "width": 368,
+        "height": 446.5
+      },
+      {
+        "kind": "dealer",
+        "title": "딜러로 가입하기",
+        "description": "전 세계 매물에 실시간으로 입찰하고 거래할 수 있습니다.",
+        "points": [
+          "국내·국제 매물 입찰 가능",
+          "감가 입력 / 수출 프로세스 관리",
+          "해외송금 / 서류 지원"
+        ],
+        "note": "딜러 계정은 관리자 승인 후 활성화됩니다.",
+        "cta": "딜러로 가입하기",
+        "x": 732,
+        "y": 331,
+        "width": 368,
+        "height": 446.5
+      }
+    ],
+    "loginPrompt": "이미 계정이 있으신가요? 로그인하기",
+    "footerLinks": [
+      "로그인하기",
+      "회사소개 · 이용약관 · 개인정보처리방침 · 고객센터"
+    ]
+  },
+  "evaluation": {
+    "pass": true,
+    "checks": {
+      "pathname": true,
+      "headerLinks": true,
+      "brand": true,
+      "tagline": true,
+      "title": true,
+      "subtitle": true,
+      "cardCount": true,
+      "cardOrder": true,
+      "cardContent": true,
+      "rowAlignment": true,
+      "widthAlignment": true,
+      "gapAlignment": true,
+      "loginPrompt": true,
+      "loginLink": true
+    },
+    "gap": 24
+  },
+  "screenshot": "/home/sh/Documents/Github/template-fullstack-mono/sdd/99_toolchain/02_exactness/results/frt-005-signup-type-browser-use.png",
+  "pass": true
+}

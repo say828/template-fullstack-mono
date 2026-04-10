@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-04-10T12:20:51.647Z",
+  "service": "template-fullstack-mono-admin",
+  "adapter_path": "client/admin/scripts/ui-parity-admin-adapter.mjs",
+  "contract_path": "sdd/02_plan/10_test/templates/ui_parity_admin_contract.yaml",
+  "target_base_url": "http://127.0.0.1:4174",
+  "default_viewport": {
+    "width": 1440,
+    "height": 1024
+  },
+  "screens": [
+    {
+      "id": "TADM_001",
+      "title": null,
+      "route": "/login",
+      "tags": [],
+      "status": "passed",
+      "diff_ratio": 0,
+      "max_diff_ratio": 0,
+      "reference_image": "sdd/03_verify/10_test/ui_parity/reference/TADM_001.png",
+      "actual_image": "20260410122050/actual/TADM_001.png",
+      "diff_image": "20260410122050/diff/TADM_001.png",
+      "detail": "reference=1440x1024 actual=1440x1024 diff_pixels=0",
+      "target_url": "http://127.0.0.1:4174/login"
+    },
+    {
+      "id": "TADM_002",
+      "title": null,
+      "route": "/forgot-password",
+      "tags": [],
+      "status": "passed",
+      "diff_ratio": 0,
+      "max_diff_ratio": 0,
+      "reference_image": "sdd/03_verify/10_test/ui_parity/reference/TADM_002.png",
+      "actual_image": "20260410122050/actual/TADM_002.png",
+      "diff_image": "20260410122050/diff/TADM_002.png",
+      "detail": "reference=1440x1024 actual=1440x1024 diff_pixels=0",
+      "target_url": "http://127.0.0.1:4174/forgot-password"
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "missing_reference": 0,
+    "capture_error": 0,
+    "matched": true
+  }
+}

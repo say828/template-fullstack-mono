@@ -1,0 +1,398 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_015",
+  "screen_name": "거래상세(송금정산)",
+  "page_number": 16,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-016-surface-01",
+  "primary_route": "/admin/remittances/:vehicleId",
+  "access": "role:ADMIN",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_015",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_015/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_015/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_015/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_015/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "딜러 → PALKA 송금 영역",
+      "lines": [
+        "송금 금액",
+        "딜러가 PALKA 운영 계좌로 송금한 실입금 금액",
+        "거래 최종 낙찰가 기준 총 거래 금액",
+        "송금 수단",
+        "계좌 이체, 가상계좌 등 실제 입금 방식",
+        "송금 일시",
+        "딜러가 송금을 실행한 시각",
+        "거래 재무 흐름 시작 시점",
+        "입금 확인 여부",
+        "PALKA 운영자가 실제 계좌 입금을 확인한 상태 값",
+        "‘확인 완료’ 이후에만 다음 정산 단계 진행 가능",
+        "입금 확인자",
+        "실입금 검증을 수행한 관리자 계정",
+        "송금 증빙 보기",
+        "딜러 송금 내역 캡처, 계좌 입금 증빙 파일 열람",
+        "분쟁·회계 감사 기준 자료",
+        "상태 규칙",
+        "송금 확인 완료 이후 데이터 불변",
+        "미확인 상태에서는 판매자 정산 불가"
+      ],
+      "matched_block_ids": [
+        "detail-summary",
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "PALKA → 판매자 정산 영역",
+      "lines": [
+        "지급 금액",
+        "총 거래 금액에서 PALKA 수수료 차감 후 판매자에게",
+        "지급되는 실수령 금액",
+        "수수료",
+        "거래 성사에 따라 확정된 PALKA 운영 수수료",
+        "계약·정책 기준 자동 산출",
+        "지급 수단",
+        "계좌 이체 등 실 지급 방식",
+        "지급 일시",
+        "판매자 계좌로 실제 입금된 시각",
+        "지급 확인 여부",
+        "운영자가 판매자 계좌 입금 여부를 검증한 상태",
+        "정산 증빙 보기",
+        "지급 내역 증빙 문서 열람",
+        "상태 규칙",
+        "지급 확인 완료 이후 거래 재무 종결 상태 확정",
+        "이후 모든 재무 정보 수정 불가"
+      ],
+      "matched_block_ids": [
+        "detail-summary",
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "정산 요약 영역",
+      "lines": [
+        "총 거래 금액",
+        "낙찰가 기준 거래 총액",
+        "PALKA 수수료",
+        "운영 수익 확정 금액",
+        "판매자 최종 수령액",
+        "판매자에게 귀속된 실 지급 금액",
+        "정산 완료 시각",
+        "재무 종결 확정 타임스탬프",
+        "상태 규칙",
+        "본 영역 값은 모든 재무 처리의 최종 기준 데이터"
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "정산 로그 영역",
+      "lines": [
+        "거래 재무 단계 전체 이벤트 로그",
+        "딜러 송금 실행",
+        "입금 확인",
+        "판매자 정산 처리",
+        "지급 확인",
+        "거래 상태 ‘거래 완료’ 전환",
+        "모든 로그는 시간순 기록",
+        "수정·삭제 불가"
+      ],
+      "matched_block_ids": [
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "detail-summary",
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "detail-summary",
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2",
+          "REQ-4"
+        ]
+      }
+    ]
+  }
+}

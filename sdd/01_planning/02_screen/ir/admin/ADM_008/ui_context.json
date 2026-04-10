@@ -1,0 +1,338 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_008",
+  "screen_name": "거래관리요약",
+  "page_number": 9,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-009-surface-01",
+  "primary_route": "/admin/trades/summary",
+  "access": "role:ADMIN",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_008",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_008/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_008/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_008/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_008/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "거래 기본 정보 영역",
+      "lines": [
+        "거래 고유 식별값(TR-20250220) 표시.",
+        "차량 기본 정보 표시 (연식 / 모델).",
+        "현재 거래의 상위 단계 상태 태그 표시: 감가협의.",
+        "해당 정보는 거래 테이블 기준값과 실시간 동기화됨"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "다음 필요 작업 알림",
+      "lines": [
+        "해당 거래의 현재상태(예: 감가협의) 내에서, 지금 시점에",
+        "거래가 진행되기 위해 다음으로 완료되어야할 세부 단계",
+        "를 표시하는 영역",
+        "거래가 다음으로 어떤 절차를 기다리고 있는지를 직관적",
+        "으로 전달하기 위한 가이드 영역",
+        "해당 알림은 거래 단계 상태가 변경되는 즉시 자동 갱신",
+        "됨."
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "담당 관리자",
+      "lines": [
+        "현재 거래의 관리 책임자로 지정된 관리자 계정 표시.",
+        "관리자가 배정되지 않은 경우 “미배정” 상태 표시됨.",
+        "배정 정보는 거래 단위로 고정 관리됨."
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "최근 이슈",
+      "lines": [
+        "해당 거래의 운영 중 발생한 지연·이탈·리스크 상태 요약",
+        "표시.",
+        "“감가 협의 지연 (판매자 승인 대기)”",
+        "→ 감가 협의 완료 SLA를 초과했으며 판매자 승인 미도",
+        "착 상태임을 의미.",
+        "이슈 상태는 SLA 계산 로직과 연동됨.",
+        "이슈가 없을 경우, 해당 영역은 비노출됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "거래 타임라인",
+      "lines": [
+        "해당 거래의 주요 단계 이벤트 이력 시간순 기록.",
+        "이벤트 유형",
+        "발생 일시",
+        "처리 주체",
+        "최종 행은 현재 거래의 확정 단계 상태를 표시"
+      ],
+      "matched_block_ids": [
+        "supporting-panel"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-6",
+      "number": "6",
+      "heading": "거래 상세 보기",
+      "lines": [
+        "클릭 시 해당 거래의 현재 단계 기준 운영 처리 화면",
+        "(ADM_009 등)으로 이동.",
+        "이동 시 본 요약 패널 종료 및 메인 콘텐츠 영역 전환됨."
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "supporting-panel"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-6",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-2",
+          "REQ-4",
+          "REQ-6"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": [
+          "REQ-5"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2124 @@
+{
+  "service": "dealer",
+  "spec_pdf": "/home/sh/Documents/Github/template-fullstack-mono/sdd/01_planning/02_screen/ir/dealer/dealer_screen_spec.pdf",
+  "page_count": 38,
+  "surface_count": 38,
+  "shared": {
+    "service": "dealer",
+    "surface_count": 38,
+    "page_count": 38,
+    "median_left_gutter_ratio": 0.1667,
+    "median_content_fill_ratio": 0.6506,
+    "median_section_count": 3,
+    "layout_profiles": {
+      "wide-panel surface": 21,
+      "mixed single-column": 14,
+      "list-heavy flow": 3
+    },
+    "density_profiles": {
+      "regular": 22,
+      "airy": 13,
+      "dense": 3
+    },
+    "accent_palette": [
+      "#f5f6fa",
+      "#fcfcfd",
+      "#f0f6fe",
+      "#f3f6fa",
+      "#363636",
+      "#f5f6f7"
+    ]
+  },
+  "surfaces": [
+    {
+      "surface_id": "page-002-surface-01",
+      "page_number": 2,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 0,
+          "top": 0,
+          "right": 2201,
+          "bottom": 1566,
+          "width": 2201,
+          "height": 1566
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fafafd",
+          "#b4adb8",
+          "#f5f6f9",
+          "#f4f6fa"
+        ],
+        "outer_gutter": {
+          "left_px": 0,
+          "right_px": 0,
+          "top_px": 0,
+          "bottom_px": 0,
+          "left_ratio": 0.0,
+          "right_ratio": 0.0,
+          "top_ratio": 0.0,
+          "bottom_ratio": 0.0,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 1.0,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-003-surface-01",
+      "page_number": 3,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 0,
+          "top": 0,
+          "right": 2201,
+          "bottom": 1566,
+          "width": 2201,
+          "height": 1566
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#e6e7eb",
+          "#f4f6fa",
+          "#604563",
+          "#fbfbfc"
+        ],
+        "outer_gutter": {
+          "left_px": 0,
+          "right_px": 0,
+          "top_px": 0,
+          "bottom_px": 0,
+          "left_ratio": 0.0,
+          "right_ratio": 0.0,
+          "top_ratio": 0.0,
+          "bottom_ratio": 0.0,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 1.0,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-004-surface-01",
+      "page_number": 4,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 2090
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2042
+        },
+        "content_bbox": {
+          "left": 101,
+          "top": 38,
+          "right": 2037,
+          "bottom": 1936,
+          "width": 1936,
+          "height": 1898
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#272539",
+          "#acaaa6",
+          "#fefbfd",
+          "#f3f4f9"
+        ],
+        "outer_gutter": {
+          "left_px": 101,
+          "right_px": 164,
+          "top_px": 38,
+          "bottom_px": 106,
+          "left_ratio": 0.0459,
+          "right_ratio": 0.0745,
+          "top_ratio": 0.0186,
+          "bottom_ratio": 0.0519,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 0.8796,
+        "section_count": 6,
+        "median_section_gap_px": 200,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-005-surface-01",
+      "page_number": 5,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 58,
+        "right": 2277,
+        "bottom": 2332
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2274
+        },
+        "content_bbox": {
+          "left": 337,
+          "top": 314,
+          "right": 1791,
+          "bottom": 966,
+          "width": 1454,
+          "height": 652
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#7f7e8b",
+          "#f3f6fa",
+          "#fefffe"
+        ],
+        "outer_gutter": {
+          "left_px": 337,
+          "right_px": 410,
+          "top_px": 314,
+          "bottom_px": 1308,
+          "left_ratio": 0.1531,
+          "right_ratio": 0.1863,
+          "top_ratio": 0.1381,
+          "bottom_ratio": 0.5752,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6606,
+        "section_count": 3,
+        "median_section_gap_px": 218,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-006-surface-01",
+      "page_number": 6,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 58,
+        "right": 2277,
+        "bottom": 2332
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2274
+        },
+        "content_bbox": {
+          "left": 367,
+          "top": 314,
+          "right": 1791,
+          "bottom": 2077,
+          "width": 1424,
+          "height": 1763
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#7c7d87",
+          "#fcfcfd",
+          "#f3f6fa",
+          "#f7f6f5"
+        ],
+        "outer_gutter": {
+          "left_px": 367,
+          "right_px": 410,
+          "top_px": 314,
+          "bottom_px": 197,
+          "left_ratio": 0.1667,
+          "right_ratio": 0.1863,
+          "top_ratio": 0.1381,
+          "bottom_ratio": 0.0866,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.647,
+        "section_count": 4,
+        "median_section_gap_px": 90,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-007-surface-01",
+      "page_number": 7,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 595,
+          "top": 445,
+          "right": 1605,
+          "bottom": 1120,
+          "width": 1010,
+          "height": 675
+        },
+        "background_color": "#383838",
+        "accent_palette": [
+          "#363636",
+          "#6c6f76",
+          "#b5b5c0",
+          "#dad8df",
+          "#1b1018"
+        ],
+        "outer_gutter": {
+          "left_px": 595,
+          "right_px": 596,
+          "top_px": 445,
+          "bottom_px": 446,
+          "left_ratio": 0.2703,
+          "right_ratio": 0.2708,
+          "top_ratio": 0.2842,
+          "bottom_ratio": 0.2848,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.4589,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-008-surface-01",
+      "page_number": 8,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 2323
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2275
+        },
+        "content_bbox": {
+          "left": 367,
+          "top": 315,
+          "right": 1791,
+          "bottom": 967,
+          "width": 1424,
+          "height": 652
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#7c7f8c",
+          "#fafbfe",
+          "#f5f6f7",
+          "#f7f6f5"
+        ],
+        "outer_gutter": {
+          "left_px": 367,
+          "right_px": 410,
+          "top_px": 315,
+          "bottom_px": 1308,
+          "left_ratio": 0.1667,
+          "right_ratio": 0.1863,
+          "top_ratio": 0.1385,
+          "bottom_ratio": 0.5749,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.647,
+        "section_count": 4,
+        "median_section_gap_px": 296,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-009-surface-01",
+      "page_number": 9,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 41,
+        "right": 2277,
+        "bottom": 2315
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2274
+        },
+        "content_bbox": {
+          "left": 340,
+          "top": 314,
+          "right": 1791,
+          "bottom": 966,
+          "width": 1451,
+          "height": 652
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#7b7d89",
+          "#f3f6fa",
+          "#fefffe"
+        ],
+        "outer_gutter": {
+          "left_px": 340,
+          "right_px": 410,
+          "top_px": 314,
+          "bottom_px": 1308,
+          "left_ratio": 0.1545,
+          "right_ratio": 0.1863,
+          "top_ratio": 0.1381,
+          "bottom_ratio": 0.5752,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6592,
+        "section_count": 3,
+        "median_section_gap_px": 219,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-010-surface-01",
+      "page_number": 10,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 0,
+          "top": 138,
+          "right": 2169,
+          "bottom": 1566,
+          "width": 2169,
+          "height": 1428
+        },
+        "background_color": "#ffffff",
+        "accent_palette": [
+          "#353636",
+          "#353638",
+          "#14161e",
+          "#353433",
+          "#6b6b6d"
+        ],
+        "outer_gutter": {
+          "left_px": 0,
+          "right_px": 32,
+          "top_px": 138,
+          "bottom_px": 0,
+          "left_ratio": 0.0,
+          "right_ratio": 0.0145,
+          "top_ratio": 0.0881,
+          "bottom_ratio": 0.0,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 0.9855,
+        "section_count": 2,
+        "median_section_gap_px": 55,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-011-surface-01",
+      "page_number": 11,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 2074
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2026
+        },
+        "content_bbox": {
+          "left": 115,
+          "top": 220,
+          "right": 2033,
+          "bottom": 1827,
+          "width": 1918,
+          "height": 1607
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#514457",
+          "#d8dadd",
+          "#f4f6f9",
+          "#fafafb"
+        ],
+        "outer_gutter": {
+          "left_px": 115,
+          "right_px": 168,
+          "top_px": 220,
+          "bottom_px": 199,
+          "left_ratio": 0.0522,
+          "right_ratio": 0.0763,
+          "top_ratio": 0.1086,
+          "bottom_ratio": 0.0982,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 0.8714,
+        "section_count": 10,
+        "median_section_gap_px": 40,
+        "wide_block_count": 0,
+        "density_profile": "dense",
+        "layout_profile": "list-heavy flow",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-012-surface-01",
+      "page_number": 12,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 46,
+        "top": 58,
+        "right": 2246,
+        "bottom": 1623
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2200,
+          "height": 1565
+        },
+        "content_bbox": {
+          "left": 704,
+          "top": 326,
+          "right": 1444,
+          "bottom": 1237,
+          "width": 740,
+          "height": 911
+        },
+        "background_color": "#383838",
+        "accent_palette": [
+          "#363636",
+          "#fcfcfd",
+          "#c1c1cb",
+          "#17367a",
+          "#981464"
+        ],
+        "outer_gutter": {
+          "left_px": 704,
+          "right_px": 756,
+          "top_px": 326,
+          "bottom_px": 328,
+          "left_ratio": 0.32,
+          "right_ratio": 0.3436,
+          "top_ratio": 0.2083,
+          "bottom_ratio": 0.2096,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.3364,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-013-surface-01",
+      "page_number": 13,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 2323
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2275
+        },
+        "content_bbox": {
+          "left": 367,
+          "top": 315,
+          "right": 1798,
+          "bottom": 1052,
+          "width": 1431,
+          "height": 737
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fbfcfd",
+          "#81818e",
+          "#f5f6f7",
+          "#f3f6fa"
+        ],
+        "outer_gutter": {
+          "left_px": 367,
+          "right_px": 403,
+          "top_px": 315,
+          "bottom_px": 1223,
+          "left_ratio": 0.1667,
+          "right_ratio": 0.1831,
+          "top_ratio": 0.1385,
+          "bottom_ratio": 0.5376,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6502,
+        "section_count": 4,
+        "median_section_gap_px": 44,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-014-surface-01",
+      "page_number": 14,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 61,
+        "top": 50,
+        "right": 2262,
+        "bottom": 2324
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2274
+        },
+        "content_bbox": {
+          "left": 366,
+          "top": 315,
+          "right": 1795,
+          "bottom": 855,
+          "width": 1429,
+          "height": 540
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#8d8e98",
+          "#f5f6f7",
+          "#f2f7fd"
+        ],
+        "outer_gutter": {
+          "left_px": 366,
+          "right_px": 406,
+          "top_px": 315,
+          "bottom_px": 1419,
+          "left_ratio": 0.1663,
+          "right_ratio": 0.1845,
+          "top_ratio": 0.1385,
+          "bottom_ratio": 0.624,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6493,
+        "section_count": 2,
+        "median_section_gap_px": 518,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-015-surface-01",
+      "page_number": 15,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 2323
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2275
+        },
+        "content_bbox": {
+          "left": 367,
+          "top": 315,
+          "right": 1796,
+          "bottom": 834,
+          "width": 1429,
+          "height": 519
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#84858f",
+          "#fcfcfd",
+          "#f5f6f7",
+          "#f3f6fa"
+        ],
+        "outer_gutter": {
+          "left_px": 367,
+          "right_px": 405,
+          "top_px": 315,
+          "bottom_px": 1441,
+          "left_ratio": 0.1667,
+          "right_ratio": 0.184,
+          "top_ratio": 0.1385,
+          "bottom_ratio": 0.6334,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6493,
+        "section_count": 2,
+        "median_section_gap_px": 518,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-016-surface-01",
+      "page_number": 16,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 2323
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2275
+        },
+        "content_bbox": {
+          "left": 367,
+          "top": 315,
+          "right": 1796,
+          "bottom": 1004,
+          "width": 1429,
+          "height": 689
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#83858f",
+          "#f3f6f9",
+          "#f5f6f7"
+        ],
+        "outer_gutter": {
+          "left_px": 367,
+          "right_px": 405,
+          "top_px": 315,
+          "bottom_px": 1271,
+          "left_ratio": 0.1667,
+          "right_ratio": 0.184,
+          "top_ratio": 0.1385,
+          "bottom_ratio": 0.5587,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6493,
+        "section_count": 3,
+        "median_section_gap_px": 200,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-017-surface-01",
+      "page_number": 17,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 2323
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2275
+        },
+        "content_bbox": {
+          "left": 367,
+          "top": 315,
+          "right": 1232,
+          "bottom": 834,
+          "width": 865,
+          "height": 519
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#7c7e8a",
+          "#f3f6f9",
+          "#fefffe"
+        ],
+        "outer_gutter": {
+          "left_px": 367,
+          "right_px": 969,
+          "top_px": 315,
+          "bottom_px": 1441,
+          "left_ratio": 0.1667,
+          "right_ratio": 0.4403,
+          "top_ratio": 0.1385,
+          "bottom_ratio": 0.6334,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.393,
+        "section_count": 2,
+        "median_section_gap_px": 518,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-018-surface-01",
+      "page_number": 18,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 42,
+        "right": 2266,
+        "bottom": 1608
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 109,
+          "top": 219,
+          "right": 2033,
+          "bottom": 1477,
+          "width": 1924,
+          "height": 1258
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#584d60",
+          "#d5d8df",
+          "#f1efea",
+          "#f7f6f5"
+        ],
+        "outer_gutter": {
+          "left_px": 109,
+          "right_px": 168,
+          "top_px": 219,
+          "bottom_px": 89,
+          "left_ratio": 0.0495,
+          "right_ratio": 0.0763,
+          "top_ratio": 0.1398,
+          "bottom_ratio": 0.0568,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 0.8741,
+        "section_count": 6,
+        "median_section_gap_px": 40,
+        "wide_block_count": 0,
+        "density_profile": "dense",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-019-surface-01",
+      "page_number": 19,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 55,
+        "top": 79,
+        "right": 2256,
+        "bottom": 1644
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1565
+        },
+        "content_bbox": {
+          "left": 188,
+          "top": 246,
+          "right": 2032,
+          "bottom": 1477,
+          "width": 1844,
+          "height": 1231
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#504c55",
+          "#d4d6dd",
+          "#f1ede9",
+          "#f3f6f9"
+        ],
+        "outer_gutter": {
+          "left_px": 188,
+          "right_px": 169,
+          "top_px": 246,
+          "bottom_px": 88,
+          "left_ratio": 0.0854,
+          "right_ratio": 0.0768,
+          "top_ratio": 0.1572,
+          "bottom_ratio": 0.0562,
+          "profile": "regular"
+        },
+        "content_fill_ratio": 0.8378,
+        "section_count": 6,
+        "median_section_gap_px": 41,
+        "wide_block_count": 0,
+        "density_profile": "dense",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-020-surface-01",
+      "page_number": 20,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 58,
+        "top": 79,
+        "right": 2258,
+        "bottom": 1644
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2200,
+          "height": 1565
+        },
+        "content_bbox": {
+          "left": 730,
+          "top": 402,
+          "right": 1470,
+          "bottom": 1096,
+          "width": 740,
+          "height": 694
+        },
+        "background_color": "#383838",
+        "accent_palette": [
+          "#363636",
+          "#17367a",
+          "#ebf0fb",
+          "#8290b2",
+          "#8d0f55"
+        ],
+        "outer_gutter": {
+          "left_px": 730,
+          "right_px": 730,
+          "top_px": 402,
+          "bottom_px": 469,
+          "left_ratio": 0.3318,
+          "right_ratio": 0.3318,
+          "top_ratio": 0.2569,
+          "bottom_ratio": 0.2997,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.3364,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-021-surface-01",
+      "page_number": 21,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 1921
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1873
+        },
+        "content_bbox": {
+          "left": 351,
+          "top": 353,
+          "right": 1835,
+          "bottom": 1219,
+          "width": 1484,
+          "height": 866
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#646285",
+          "#f5f6f8",
+          "#f8f9fb"
+        ],
+        "outer_gutter": {
+          "left_px": 351,
+          "right_px": 366,
+          "top_px": 353,
+          "bottom_px": 654,
+          "left_ratio": 0.1595,
+          "right_ratio": 0.1663,
+          "top_ratio": 0.1885,
+          "bottom_ratio": 0.3492,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6742,
+        "section_count": 3,
+        "median_section_gap_px": 273,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-022-surface-01",
+      "page_number": 22,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 70,
+        "top": 58,
+        "right": 2271,
+        "bottom": 2110
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2052
+        },
+        "content_bbox": {
+          "left": 404,
+          "top": 353,
+          "right": 1834,
+          "bottom": 1250,
+          "width": 1430,
+          "height": 897
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#55617f",
+          "#f3f6f8",
+          "#f8f9fb"
+        ],
+        "outer_gutter": {
+          "left_px": 404,
+          "right_px": 367,
+          "top_px": 353,
+          "bottom_px": 802,
+          "left_ratio": 0.1836,
+          "right_ratio": 0.1667,
+          "top_ratio": 0.172,
+          "bottom_ratio": 0.3908,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6497,
+        "section_count": 3,
+        "median_section_gap_px": 279,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-023-surface-01",
+      "page_number": 23,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 64,
+        "top": 50,
+        "right": 2265,
+        "bottom": 2422
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2372
+        },
+        "content_bbox": {
+          "left": 405,
+          "top": 929,
+          "right": 1834,
+          "bottom": 1233,
+          "width": 1429,
+          "height": 304
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#556187",
+          "#f4f6f9",
+          "#f8f9fb"
+        ],
+        "outer_gutter": {
+          "left_px": 405,
+          "right_px": 367,
+          "top_px": 929,
+          "bottom_px": 1139,
+          "left_ratio": 0.184,
+          "right_ratio": 0.1667,
+          "top_ratio": 0.3917,
+          "bottom_ratio": 0.4802,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6493,
+        "section_count": 4,
+        "median_section_gap_px": 427,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-024-surface-01",
+      "page_number": 24,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 49,
+        "right": 2276,
+        "bottom": 1613
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2200,
+          "height": 1564
+        },
+        "content_bbox": {
+          "left": 565,
+          "top": 57,
+          "right": 1625,
+          "bottom": 1507,
+          "width": 1060,
+          "height": 1450
+        },
+        "background_color": "#383838",
+        "accent_palette": [
+          "#363636",
+          "#fcfcfd",
+          "#c9c8cd",
+          "#c61577",
+          "#17367a"
+        ],
+        "outer_gutter": {
+          "left_px": 565,
+          "right_px": 575,
+          "top_px": 57,
+          "bottom_px": 57,
+          "left_ratio": 0.2568,
+          "right_ratio": 0.2614,
+          "top_ratio": 0.0364,
+          "bottom_ratio": 0.0364,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.4818,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-025-surface-01",
+      "page_number": 25,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 45,
+        "top": 58,
+        "right": 2246,
+        "bottom": 2938
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2880
+        },
+        "content_bbox": {
+          "left": 403,
+          "top": 198,
+          "right": 1835,
+          "bottom": 1361,
+          "width": 1432,
+          "height": 1163
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#606684",
+          "#f6f9fe",
+          "#f3f6fb"
+        ],
+        "outer_gutter": {
+          "left_px": 403,
+          "right_px": 366,
+          "top_px": 198,
+          "bottom_px": 1519,
+          "left_ratio": 0.1831,
+          "right_ratio": 0.1663,
+          "top_ratio": 0.0688,
+          "bottom_ratio": 0.5274,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6506,
+        "section_count": 7,
+        "median_section_gap_px": 131,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "list-heavy flow",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-026-surface-01",
+      "page_number": 26,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 2676
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2628
+        },
+        "content_bbox": {
+          "left": 402,
+          "top": 354,
+          "right": 1834,
+          "bottom": 1679,
+          "width": 1432,
+          "height": 1325
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#7e7f95",
+          "#f7f9fd",
+          "#f3f6fb"
+        ],
+        "outer_gutter": {
+          "left_px": 402,
+          "right_px": 367,
+          "top_px": 354,
+          "bottom_px": 949,
+          "left_ratio": 0.1826,
+          "right_ratio": 0.1667,
+          "top_ratio": 0.1347,
+          "bottom_ratio": 0.3611,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6506,
+        "section_count": 6,
+        "median_section_gap_px": 147,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-027-surface-01",
+      "page_number": 27,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 48,
+        "top": 48,
+        "right": 2249,
+        "bottom": 4445
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 4397
+        },
+        "content_bbox": {
+          "left": 394,
+          "top": 1004,
+          "right": 1826,
+          "bottom": 3334,
+          "width": 1432,
+          "height": 2330
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#84829a",
+          "#f6f9fe",
+          "#f5f6f8"
+        ],
+        "outer_gutter": {
+          "left_px": 394,
+          "right_px": 375,
+          "top_px": 1004,
+          "bottom_px": 1063,
+          "left_ratio": 0.179,
+          "right_ratio": 0.1704,
+          "top_ratio": 0.2283,
+          "bottom_ratio": 0.2418,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6506,
+        "section_count": 8,
+        "median_section_gap_px": 216,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "list-heavy flow",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-028-surface-01",
+      "page_number": 28,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 43,
+        "right": 2276,
+        "bottom": 1607
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2200,
+          "height": 1564
+        },
+        "content_bbox": {
+          "left": 576,
+          "top": 280,
+          "right": 1625,
+          "bottom": 1317,
+          "width": 1049,
+          "height": 1037
+        },
+        "background_color": "#383838",
+        "accent_palette": [
+          "#363636",
+          "#fcfcfd",
+          "#17367a",
+          "#fafcfc",
+          "#91165a"
+        ],
+        "outer_gutter": {
+          "left_px": 576,
+          "right_px": 575,
+          "top_px": 280,
+          "bottom_px": 247,
+          "left_ratio": 0.2618,
+          "right_ratio": 0.2614,
+          "top_ratio": 0.179,
+          "bottom_ratio": 0.1579,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.4768,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-029-surface-01",
+      "page_number": 29,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 45,
+        "top": 42,
+        "right": 2246,
+        "bottom": 3493
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 3451
+        },
+        "content_bbox": {
+          "left": 403,
+          "top": 199,
+          "right": 1835,
+          "bottom": 2609,
+          "width": 1432,
+          "height": 2410
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#f9fbfe",
+          "#172150",
+          "#bdc1cc",
+          "#f5f6f8"
+        ],
+        "outer_gutter": {
+          "left_px": 403,
+          "right_px": 366,
+          "top_px": 199,
+          "bottom_px": 842,
+          "left_ratio": 0.1831,
+          "right_ratio": 0.1663,
+          "top_ratio": 0.0577,
+          "bottom_ratio": 0.244,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6506,
+        "section_count": 6,
+        "median_section_gap_px": 368,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-030-surface-01",
+      "page_number": 30,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 3499
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 3451
+        },
+        "content_bbox": {
+          "left": 354,
+          "top": 199,
+          "right": 1834,
+          "bottom": 3290,
+          "width": 1480,
+          "height": 3091
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#fcfcfd",
+          "#e6f2e9",
+          "#49516e",
+          "#f4f6f9"
+        ],
+        "outer_gutter": {
+          "left_px": 354,
+          "right_px": 367,
+          "top_px": 199,
+          "bottom_px": 161,
+          "left_ratio": 0.1608,
+          "right_ratio": 0.1667,
+          "top_ratio": 0.0577,
+          "bottom_ratio": 0.0467,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.6724,
+        "section_count": 4,
+        "median_section_gap_px": 77,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-031-surface-01",
+      "page_number": 31,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 538,
+          "top": 1081,
+          "right": 2027,
+          "bottom": 1167,
+          "width": 1489,
+          "height": 86
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#5b446b",
+          "#d5d7db",
+          "#eceff2",
+          "#f0f6fe"
+        ],
+        "outer_gutter": {
+          "left_px": 538,
+          "right_px": 174,
+          "top_px": 1081,
+          "bottom_px": 399,
+          "left_ratio": 0.2444,
+          "right_ratio": 0.0791,
+          "top_ratio": 0.6903,
+          "bottom_ratio": 0.2548,
+          "profile": "regular"
+        },
+        "content_fill_ratio": 0.6765,
+        "section_count": 3,
+        "median_section_gap_px": 482,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-032-surface-01",
+      "page_number": 32,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 0,
+          "top": 0,
+          "right": 2201,
+          "bottom": 1566,
+          "width": 2201,
+          "height": 1566
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#4e3d51",
+          "#ebecf0",
+          "#c2cad1",
+          "#f0f6fe"
+        ],
+        "outer_gutter": {
+          "left_px": 0,
+          "right_px": 0,
+          "top_px": 0,
+          "bottom_px": 0,
+          "left_ratio": 0.0,
+          "right_ratio": 0.0,
+          "top_ratio": 0.0,
+          "bottom_ratio": 0.0,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 1.0,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-033-surface-01",
+      "page_number": 33,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 532,
+          "top": 1330,
+          "right": 2027,
+          "bottom": 1416,
+          "width": 1495,
+          "height": 86
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#493c63",
+          "#d1d6dd",
+          "#f0f6fe",
+          "#fcfcfd"
+        ],
+        "outer_gutter": {
+          "left_px": 532,
+          "right_px": 174,
+          "top_px": 1330,
+          "bottom_px": 150,
+          "left_ratio": 0.2417,
+          "right_ratio": 0.0791,
+          "top_ratio": 0.8493,
+          "bottom_ratio": 0.0958,
+          "profile": "regular"
+        },
+        "content_fill_ratio": 0.6792,
+        "section_count": 2,
+        "median_section_gap_px": 1247,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-034-surface-01",
+      "page_number": 34,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 30,
+        "top": 48,
+        "right": 2231,
+        "bottom": 1783
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1735
+        },
+        "content_bbox": {
+          "left": 559,
+          "top": 1065,
+          "right": 1965,
+          "bottom": 1152,
+          "width": 1406,
+          "height": 87
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#5b496c",
+          "#ecedef",
+          "#cacbcf",
+          "#f0f6fe"
+        ],
+        "outer_gutter": {
+          "left_px": 559,
+          "right_px": 236,
+          "top_px": 1065,
+          "bottom_px": 583,
+          "left_ratio": 0.254,
+          "right_ratio": 0.1072,
+          "top_ratio": 0.6138,
+          "bottom_ratio": 0.336,
+          "profile": "regular"
+        },
+        "content_fill_ratio": 0.6388,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-035-surface-01",
+      "page_number": 35,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 67,
+        "top": 48,
+        "right": 2268,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 561,
+          "top": 832,
+          "right": 2025,
+          "bottom": 1141,
+          "width": 1464,
+          "height": 309
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#f6e7e8",
+          "#957c89",
+          "#f0f6fe",
+          "#efeff3"
+        ],
+        "outer_gutter": {
+          "left_px": 561,
+          "right_px": 176,
+          "top_px": 832,
+          "bottom_px": 425,
+          "left_ratio": 0.2549,
+          "right_ratio": 0.08,
+          "top_ratio": 0.5313,
+          "bottom_ratio": 0.2714,
+          "profile": "regular"
+        },
+        "content_fill_ratio": 0.6652,
+        "section_count": 2,
+        "median_section_gap_px": 749,
+        "wide_block_count": 1,
+        "density_profile": "airy",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-036-surface-01",
+      "page_number": 36,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 76,
+        "top": 48,
+        "right": 2277,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 0,
+          "top": 0,
+          "right": 2201,
+          "bottom": 1566,
+          "width": 2201,
+          "height": 1566
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#5b3e56",
+          "#ececee",
+          "#c8cdd3",
+          "#f0f6fe"
+        ],
+        "outer_gutter": {
+          "left_px": 0,
+          "right_px": 0,
+          "top_px": 0,
+          "bottom_px": 0,
+          "left_ratio": 0.0,
+          "right_ratio": 0.0,
+          "top_ratio": 0.0,
+          "bottom_ratio": 0.0,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 1.0,
+        "section_count": 2,
+        "median_section_gap_px": 527,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-037-surface-01",
+      "page_number": 37,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 58,
+        "right": 2266,
+        "bottom": 1623
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1565
+        },
+        "content_bbox": {
+          "left": 0,
+          "top": 0,
+          "right": 2201,
+          "bottom": 1565,
+          "width": 2201,
+          "height": 1565
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#51384f",
+          "#ebecee",
+          "#c0c5cd",
+          "#f0f6fe"
+        ],
+        "outer_gutter": {
+          "left_px": 0,
+          "right_px": 0,
+          "top_px": 0,
+          "bottom_px": 0,
+          "left_ratio": 0.0,
+          "right_ratio": 0.0,
+          "top_ratio": 0.0,
+          "bottom_ratio": 0.0,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 1.0,
+        "section_count": 1,
+        "median_section_gap_px": null,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-038-surface-01",
+      "page_number": 38,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 65,
+        "top": 48,
+        "right": 2266,
+        "bottom": 1614
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 1566
+        },
+        "content_bbox": {
+          "left": 0,
+          "top": 0,
+          "right": 2201,
+          "bottom": 1566,
+          "width": 2201,
+          "height": 1566
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#5f5162",
+          "#d6d8db",
+          "#eef0f3",
+          "#f0f6fe"
+        ],
+        "outer_gutter": {
+          "left_px": 0,
+          "right_px": 0,
+          "top_px": 0,
+          "bottom_px": 0,
+          "left_ratio": 0.0,
+          "right_ratio": 0.0,
+          "top_ratio": 0.0,
+          "bottom_ratio": 0.0,
+          "profile": "tight"
+        },
+        "content_fill_ratio": 1.0,
+        "section_count": 2,
+        "median_section_gap_px": 184,
+        "wide_block_count": 0,
+        "density_profile": "airy",
+        "layout_profile": "wide-panel surface",
+        "viewport_kind": "landscape"
+      },
+      "preview_path": null
+    },
+    {
+      "surface_id": "page-039-surface-01",
+      "page_number": 39,
+      "surface_index": 1,
+      "screen_name": null,
+      "source_key": null,
+      "frame_refined": true,
+      "bbox": {
+        "left": 41,
+        "top": 48,
+        "right": 2242,
+        "bottom": 2624
+      },
+      "metrics": {
+        "surface_size": {
+          "width": 2201,
+          "height": 2576
+        },
+        "content_bbox": {
+          "left": 963,
+          "top": 1714,
+          "right": 1548,
+          "bottom": 2350,
+          "width": 585,
+          "height": 636
+        },
+        "background_color": "#f8f8f8",
+        "accent_palette": [
+          "#f5f6fa",
+          "#343464",
+          "#e9ebed",
+          "#a4a9b1",
+          "#f0f6fe"
+        ],
+        "outer_gutter": {
+          "left_px": 963,
+          "right_px": 653,
+          "top_px": 1714,
+          "bottom_px": 226,
+          "left_ratio": 0.4375,
+          "right_ratio": 0.2967,
+          "top_ratio": 0.6654,
+          "bottom_ratio": 0.0877,
+          "profile": "wide"
+        },
+        "content_fill_ratio": 0.2658,
+        "section_count": 5,
+        "median_section_gap_px": 145,
+        "wide_block_count": 0,
+        "density_profile": "regular",
+        "layout_profile": "mixed single-column",
+        "viewport_kind": "portrait"
+      },
+      "preview_path": null
+    }
+  ]
+}

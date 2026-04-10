@@ -1,0 +1,335 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "seller",
+  "screen_code": "FRT_016",
+  "screen_name": "입찰현황",
+  "page_number": 17,
+  "source_spec": "sdd/01_planning/02_screen/ir/seller/seller_screen_spec.pdf",
+  "surface_id": "page-017-surface-01",
+  "primary_route": "/seller/vehicles/:vehicleId/bids",
+  "access": "role:SELLER",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "seller-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "seller-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/seller/FRT_016",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/seller/FRT_016/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/seller/FRT_016/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/seller/FRT_016/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/seller/FRT_016/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "차량 요약 영역",
+      "lines": [
+        "차량 대표 이미지, 거래 상태 태그 ‘입찰중’, 거래 유형 태",
+        "그 ‘국내 거래’ 노출됨.",
+        "차량명, 연식, 주행거리, 연료 정보 노출됨.",
+        "현재 최고 입찰가, 입찰 건수, 입찰 마감 기한, 남은 기간",
+        "이 함께 노출됨.",
+        "표시 값은 실시간 입찰 데이터 기준으로 갱신됨."
+      ],
+      "matched_block_ids": [
+        "primary-list",
+        "supporting-panel"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "차량 상세 보기 버튼",
+      "lines": [
+        "우측 상단 고정 노출됨.",
+        "클릭 시 차량 상세 정보 화면(FRT_014) 으로 전환됨.",
+        "전환 시 현재 입찰 현황 데이터는 유지됨."
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "입찰 목록 영역",
+      "lines": [
+        "입찰 딜러 리스트가 테이블 형태로 노출됨.",
+        "컬럼 구성: 딜러명 / 입찰가 / 입찰 시간 / 국가 / 비고",
+        "입찰가는 내림차순 기준 기본 정렬됨.",
+        "현재 최고 입찰가는 Highest 태그로 시각적 강조 노출됨."
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "더 보기 버튼",
+      "lines": [
+        "기본 노출 건수 초과 시 하단에 노출됨.",
+        "클릭 시 추가 입찰 내역이 목록 하단에 로드됨.",
+        "로드 후 기존 스크롤 위치는 유지됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "입찰 관리 패널",
+      "lines": [
+        "남은 시간 카운트다운 타이머 노출됨.",
+        "‘새 입찰 알림 받기’ 토글, ‘최고가 자동 갱신 알림’ 토글 노",
+        "출됨.",
+        "각 토글 상태는 판매자 계정 기준으로 저장됨."
+      ],
+      "matched_block_ids": [
+        "supporting-panel"
+      ],
+      "match_method": "order-fallback"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "primary-list",
+          "supporting-panel"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "supporting-panel"
+        ],
+        "match_method": "order-fallback"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-2",
+          "REQ-4"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-5"
+        ]
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

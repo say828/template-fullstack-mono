@@ -1,0 +1,288 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_040",
+  "screen_name": "판매자상세(차량이력)",
+  "page_number": 41,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-041-surface-01",
+  "primary_route": "/admin/sellers/:sellerId/history",
+  "access": "role:ADMIN",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_040",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_040/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_040/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_040/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_040/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "차량 판매 이력 목록 영역",
+      "lines": [
+        "선택된 판매자 ID 기준으로 생성된 모든 거래 이력 목록",
+        "이 시간순으로 고정 노출되는 영역",
+        "각 거래의 현재 서비스 단계 상태값 그대로 노출",
+        "상태 변경 발생 시 본 목록에서도 실시간 반영 필요",
+        "동일 판매자의 복수 거래 상태를 동시에 비교·판단 가능",
+        "거래 등록일 기준 최신순 정렬 유지",
+        "각 카드 클릭 시 해당하는 매물의 거래상세(ADM_009",
+        "등) 화면으로 이동"
+      ],
+      "matched_block_ids": [
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      }
+    ]
+  }
+}

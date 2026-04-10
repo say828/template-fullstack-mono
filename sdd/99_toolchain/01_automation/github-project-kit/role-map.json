@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "roles": [
+    {
+      "id": "project",
+      "label": "role:project",
+      "codex_agent": "project",
+      "claude_agent": "project-manager",
+      "responsibilities": [
+        "task decomposition",
+        "project status alignment",
+        "issue/pr handoff"
+      ]
+    },
+    {
+      "id": "specs",
+      "label": "role:specs",
+      "codex_agent": "specs",
+      "claude_agent": "uiux-designer",
+      "responsibilities": [
+        "spec alignment",
+        "ir drift review"
+      ]
+    },
+    {
+      "id": "architecture",
+      "label": "role:architecture",
+      "codex_agent": "architecture",
+      "claude_agent": "backend-dev",
+      "responsibilities": [
+        "boundary design",
+        "migration direction"
+      ]
+    },
+    {
+      "id": "ui",
+      "label": "role:ui",
+      "codex_agent": "ui",
+      "claude_agent": "frontend-dev",
+      "responsibilities": [
+        "screen implementation",
+        "ui contract alignment"
+      ]
+    },
+    {
+      "id": "api",
+      "label": "role:api",
+      "codex_agent": "api",
+      "claude_agent": "backend-dev",
+      "responsibilities": [
+        "api contract",
+        "backend behavior"
+      ]
+    },
+    {
+      "id": "runtime",
+      "label": "role:runtime",
+      "codex_agent": "runtime",
+      "claude_agent": "devops",
+      "responsibilities": [
+        "runtime wiring",
+        "repo-local automation"
+      ]
+    },
+    {
+      "id": "quality",
+      "label": "role:quality",
+      "codex_agent": "quality",
+      "claude_agent": "test-dev",
+      "responsibilities": [
+        "validation gate",
+        "regression and proof"
+      ]
+    },
+    {
+      "id": "ci",
+      "label": "role:ci",
+      "codex_agent": "ci",
+      "claude_agent": "github-ops",
+      "responsibilities": [
+        "workflow policy",
+        "release path"
+      ]
+    },
+    {
+      "id": "gitops",
+      "label": "role:gitops",
+      "codex_agent": "gitops",
+      "claude_agent": "devops",
+      "responsibilities": [
+        "deployment automation",
+        "delivery wiring"
+      ]
+    },
+    {
+      "id": "security",
+      "label": "role:security",
+      "codex_agent": "security",
+      "claude_agent": "ai-dev",
+      "responsibilities": [
+        "security review",
+        "operational risk"
+      ]
+    }
+  ]
+}

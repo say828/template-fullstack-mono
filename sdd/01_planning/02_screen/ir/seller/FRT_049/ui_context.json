@@ -1,0 +1,293 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "seller",
+  "screen_code": "FRT_049",
+  "screen_name": "1:1문의",
+  "page_number": 50,
+  "source_spec": "sdd/01_planning/02_screen/ir/seller/seller_screen_spec.pdf",
+  "surface_id": "page-050-surface-01",
+  "primary_route": "/support/inquiries",
+  "access": "role:SELLER",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "seller-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "seller-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/seller/FRT_049",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/seller/FRT_049/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/seller/FRT_049/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/seller/FRT_049/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/seller/FRT_049/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "문의 입력 폼 영역",
+      "lines": [
+        "사용자가 문의를 접수하기 위해 입력해야 하는 필드 영역",
+        "으로, 이메일, 문의 유형, 문의 제목, 문의 내용, 파일 첨부",
+        "항목으로 구성됨",
+        "각 항목은 필수/선택 여부에 따라 검증 로직이 적용됨"
+      ],
+      "matched_block_ids": [
+        "screen-title",
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "개인정보 및 약관 동의 체크박스",
+      "lines": [
+        "문의 접수 전 필수 동의 확인 영역",
+        "이용약관 / 개인정보 처리방침 링크 제공",
+        "동의 체크 필수",
+        "미동의 상태에서는 문의 접수 불가"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "문의하기 버튼",
+      "lines": [
+        "입력된 문의 내용을 최종 제출하는 버튼으로, 필수 입력",
+        "값 및 약관 동의 조건이 충족된 경우에만 활성화됨",
+        "클릭 시 문의 접수 완료 팝업이 노출되며, 팝업 내 확인 버",
+        "튼 클릭 시 현재 화면을 유지한 채 입력된 문의 내용이 초",
+        "기화됨",
+        "운영팀이 확인 후 등록하신 이메일로",
+        "답변을 드릴 예정입니다.",
+        "확인"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "screen-title",
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-2",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_036",
+  "screen_name": "판매자정산관리상세(대기)",
+  "page_number": 37,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-037-surface-01",
+  "primary_route": "/admin/settlements/:vehicleId",
+  "access": "role:ADMIN",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_036",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_036/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_036/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_036/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_036/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "정산 상태 안내(정산 대기 중)",
+      "lines": [
+        "정산 처리 가능한 상태임이 고정 노출됨",
+        "정산대기 상태는 “딜러 송금 확인 완료 + 판매자 정산 미",
+        "처리” 조합으로만 성립됨.",
+        "정산 처리 성공 확정 시 해당 상태 안내 영역은 더 이상 노",
+        "출 대상이 아니며, 정산완료 화면/상태로 전환됨."
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "거래·판매자·입금 기준 정보",
+      "lines": [
+        "정산 트랜잭션 산정·지급의 기준이 되는 고정 데이터로",
+        "노출됨.",
+        "차량 정보 : 차량 모델명/트림, 차량 식별 정보(예: 번호",
+        "판/차량번호)가 표시됨. 정산 레코드에 “정산 당시 스냅",
+        "샷”으로 저장되어야 함",
+        "판매자/딜러 식별 : 판매자명, 딜러명(또는 딜러사/담당",
+        "자)이 표시됨. 정산 레코드에는 내부 식별자(seller_id,",
+        "dealer_id)가 함께 고정 저장됨.",
+        "판매자 계좌 정보 : 은행명, 계좌번호, 예금주가 표시됨.",
+        "본 값은 정산 실행 시 “지급 대상 계좌”로 사용되므로, 화",
+        "면 노출값과 서버 지급 대상 값의 불일치가 발생하지 않",
+        "도록 정산 실행 직전 서버에서 최신 계좌 검증이 선행됨",
+        "(계좌 미등록/형식 오류/예금주 불일치 등).",
+        "입금(송금) 기준 정보 : 딜러 송금 완료/확인 시각(송금일",
+        "시)이 표시됨. 정산 레코드에는 “기준 송금 확인 시각”이",
+        "고정 저장되어 감사/정산 분쟁 시 기준 타임스탬프로 사",
+        "용됨."
+      ],
+      "matched_block_ids": [
+        "detail-identity",
+        "detail-info"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "정산 금액 상세(정책 10%)",
+      "lines": [
+        "정산 트랜잭션에 사용될 산식 결과가 숫자 단위로 고정",
+        "노출됨.",
+        "송금 확인 금액 : 딜러 송금 확인 단계에서 확정된 금액이",
+        "표시됨. 정산 처리 시 이 값이 “정산 기준 원금”으로 사용",
+        "됨. 화면 표시값은 참고이며, 최종 정산 기준 원금은 서버",
+        "에서 “송금확인 확정 레코드”를 조회해 고정 적용됨.",
+        "플랫폼 수수료(10%) : 정책 수수료율(10%)이 적용된 차",
+        "감 금액이 표시됨. 반올림/절사 규칙이 존재하는 경우(원",
+        "단위 절사 등) 정산 정책 테이블의 규칙으로 확정 적용되",
+        "어야 함.",
+        "최종 정산 예정액 : 송금 확인 금액 - 플랫폼 수수료 결과",
+        "가 표시됨. 정산 처리 성공 시 실제 지급 요청 금액으로 사",
+        "용됨. 정산 처리 버튼 클릭 시, 화면의 표시값이 아니라 서",
+        "버 계산 결과가 정산 레코드에 최종 확정 저장됨(프론트",
+        "계산값 단독 신뢰 불가)."
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "취소",
+      "lines": [
+        "클릭 시 팝업만 종료됨.",
+        "거래 상태/정산 상태 변화 없으며, 정산 트랜잭션 호출/정",
+        "산 레코드 생성/외부 지급 요청 모두 미발생 상태로 종료",
+        "됨."
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "정산 처리",
+      "lines": [
+        "실제 정산(지급) 트랜잭션의 실행 트리거임. 클릭 시 즉시",
+        "“중복 실행 방지”가 걸려야 하며 동일 거래에 대해 2회 이",
+        "상 정산 요청이 승인되지 않도록 서버에서 원자적 잠금이",
+        "선행됨.",
+        "정산 가능 상태 검증(정산대기 여부), 송금확인 확정 여",
+        "부, 판매자 계좌 유효성, 정산 금액(원금/수수료/지급액)",
+        "재산정, 처리 권한(관리자 권한) 검증이 통과되어야 함.",
+        "정산 레코드가 “처리중”으로 선생성되고, 이후 외부 지급",
+        "호출이 발생함. 외부 지급 성공 콜백/응답이 확정되기 전",
+        "까지 거래는 “정산대기 유지 + 정산처리중 내부 상태”로",
+        "관리됨.",
+        "외부 지급 성공이 확정되면 정산 레코드가 “정산완료”로",
+        "확정 저장됨. 정산 완료 일시, 처리 관리자, 지급 트랜잭션",
+        "식별자(은행/PG 거래번호)가 저장됨. 판매자 정산 상태",
+        "가 정산완료로 전환되고, 상위 리스트(판매자 정산 관리)",
+        "에서도 상태가 동기 반영됨."
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "detail-identity",
+          "detail-info"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-4",
+          "REQ-5"
+        ]
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

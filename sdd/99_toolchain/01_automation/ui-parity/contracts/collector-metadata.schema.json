@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ParityCollectorMetadata",
+  "type": "object",
+  "required": [
+    "project",
+    "repo",
+    "screen_code",
+    "route",
+    "diff_ratio",
+    "proof_artifacts_root"
+  ],
+  "properties": {
+    "project": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "screen_code": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    },
+    "diff_ratio": {
+      "type": "number"
+    },
+    "proof_artifacts_root": {
+      "type": "string"
+    }
+  }
+}

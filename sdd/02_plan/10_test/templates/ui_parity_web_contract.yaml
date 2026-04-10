@@ -1,0 +1,20 @@
+kind: ui-parity
+metadata:
+  service: template-fullstack-mono-web
+  generated_by: sdd/99_toolchain/01_automation/ui-parity/cli/scaffold-contract.mjs
+spec:
+  target_base_url: http://127.0.0.1:4173
+  adapter_path: client/web/scripts/ui-parity-app-adapter.mjs
+screens:
+  - id: TWEB_001
+    route: /
+    reference_image: sdd/03_verify/10_test/ui_parity/reference/TWEB_001.png
+  - id: TWEB_002
+    route: /login
+    reference_image: sdd/03_verify/10_test/ui_parity/reference/TWEB_002.png
+  - id: TWEB_003
+    route: /signup
+    reference_image: sdd/03_verify/10_test/ui_parity/reference/TWEB_003.png
+  - id: TWEB_004
+    route: /support/notices
+    reference_image: sdd/03_verify/10_test/ui_parity/reference/TWEB_004.png

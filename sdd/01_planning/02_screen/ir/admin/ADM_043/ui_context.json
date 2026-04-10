@@ -1,0 +1,429 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_043",
+  "screen_name": "딜러상세(승인대기)",
+  "page_number": 44,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-044-surface-01",
+  "primary_route": "/admin/dealers/:dealerId",
+  "access": "role:ADMIN",
+  "implementation_status": "unknown",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_043",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_043/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_043/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_043/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_043/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "딜러 식별/상태 요약 영역",
+      "lines": [
+        "선택된 딜러의 심사 대상을 명확히 고정하는 헤더 영역.",
+        "딜러명, 현재 상태(승인대기), 딜러ID가 단일 블록으로 노",
+        "출되어 “누구를 처리 중인지” 혼선 차단.",
+        "상태 라벨은 본 패널의 처리 가능 버튼(5,6번) 노출 조건",
+        "과 동일 기준으로 사용.",
+        "업체명(또는 소속명)이 함께 노출되어 동명이인/유사 딜",
+        "러명 구분 근거로 사용.",
+        "패널 닫기(X)는 처리 확정 없이 이탈 가능한 종료 동선으",
+        "로 유지되며, 이탈 시 목록의 조회 조건/페이지 유지"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "정보 탭 영역(기본 및 신원 정보 / 입찰 참여 이력)",
+      "lines": [
+        "심사 판단에 필요한 정보 묶음을 탭으로 분리 제공하는",
+        "전환 영역.",
+        "기본 및 신원 정보 탭은 “심사 판단의 본문”으로 취급되며",
+        "기본 진입 탭으로 고정.",
+        "입찰 참여 이력 탭은 운영 참고용 보조 정보이며, 승인대",
+        "기 단계에서는 0건",
+        "탭 전환은 동일 패널 내 콘텐츠만 교체되며, 1번 식별 영",
+        "역 및 5/6번 액션 영역은 유지되는 구조."
+      ],
+      "matched_block_ids": [
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "기본/신원 정보 노출 영역",
+      "lines": [
+        "딜러가 제출한 가입 정보의 사실 확인을 위한 읽기 전용",
+        "정보 블록.",
+        "연락처/이메일은 승인 안내 및 운영 커뮤니케이션의 기",
+        "본 채널이며, 6번 승인 처리 시 수신 대상의 기준값으로",
+        "사용.",
+        "사업자/신원 관련 식별값(예: 사업자등록번호)은 중복 가",
+        "입, 허위 가입, 제재 이력 조회의 매칭 키로 사용",
+        "활동 국가/업체 소재지는 관할 운영 정책(서류 요건/정산",
+        "요건/지원 언어 등) 분기 판단 근거.",
+        "가입일/최근 로그인일은 계정 생성 이후 사용 흔적을 판",
+        "단하는 보조 지표이며, 승인대기에서는 최근 로그인일이",
+        "없거나 가입일과 동일할 수 있음"
+      ],
+      "matched_block_ids": [
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "제출 서류/이미지 확인 영역(사업자등록증/매매사업증/신분",
+      "lines": [
+        "증 사본 등)",
+        "딜러가 업로드한 증빙 서류를 확인하는 검증 영역.",
+        "서류 종류 탭(예: 사업자등록증 / 매매사업증 / 신분증 사",
+        "본)은 제출물 유형별로 분리되어 조회되며, 선택 탭에 해",
+        "당하는 이미지가 미리보기 영역에 표시.",
+        "이미지 미리보기는 호버 시 확대/축소/원본 보기/다운로",
+        "드 등 도구 노출"
+      ],
+      "matched_block_ids": [
+        "detail-hero"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "반려 버튼",
+      "lines": [
+        "승인대기 딜러를 반려 상태로 전환시키는 심사 종료 트리",
+        "거.",
+        "클릭 시 반려 처리 팝업(ADM_044)이 호출됨",
+        "반려 확정 시 처리 결과",
+        "딜러 상태: 승인대기 → 반려로 전환",
+        "목록 화면: 해당 딜러가 반려 탭에서 조회 가능 상태",
+        "로 재분류",
+        "딜러 알림: 반려 안내(사유 포함) 메일 발송"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-6",
+      "number": "6",
+      "heading": "가입 승인 버튼",
+      "lines": [
+        "승인대기 딜러를 정상 상태로 전환시키고, 승인 안내 메",
+        "일 발송까지 확정하는 심사 종료 트리거.",
+        "승인 확정 시 처리 결과",
+        "딜러 상태: 승인대기 → 정상 전환",
+        "승인 안내 메일: 딜러 계정의 이메일(3번)에 발송 확",
+        "정",
+        "목록 화면: 정상 탭으로 이동 조회 가능 상태로 재분",
+        "류"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "detail-hero"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-6",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-5",
+          "REQ-6"
+        ]
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": [
+          "REQ-4"
+        ]
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": [
+          "REQ-2",
+          "REQ-3"
+        ]
+      }
+    ]
+  }
+}

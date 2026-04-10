@@ -1,0 +1,304 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_053",
+  "screen_name": "정책문서관리",
+  "page_number": 54,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-054-surface-01",
+  "primary_route": "/admin/policies",
+  "access": "role:ADMIN",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_053",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_053/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_053/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_053/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_053/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "검색",
+      "lines": [
+        "입력한 키워드를 기준으로 정책 문서 목록이 조회됨",
+        "검색 기준: 문서 제목",
+        "검색 결과가 없을 경우에도 검색어는 유지된 상태로 목록",
+        "이 노출됨",
+        "검색 조건이 적용된 상태에서 필터 변경 시에도 검색 조",
+        "건은 유지됨"
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "필터",
+      "lines": [
+        "카테고리",
+        "전체 / 서비스 이용약관 / 개인정보 처리방침 / 커뮤",
+        "니티 가이드라인 / 운영정책 등 선택 가능",
+        "정책 문서의 유형 기준으로 목록이 필터링됨",
+        "노출여부",
+        "전체 / 노출 / 비노출 선택 가능",
+        "실제 서비스 화면에 적용 중인 정책 문서 여부 기준으",
+        "로 구분됨"
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "정책 등록 버튼",
+      "lines": [
+        "클릭 시 정책 문서 등록 화면(ADM_054)을 호출함",
+        "신규 정책 문서 또는 신규 버전 정책을 등록할 수 있음",
+        "등록 완료 후 정책 문서 목록 화면으로 복귀됨"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "정책 문서 목록 테이블",
+      "lines": [
+        "등록된 정책 문서가 리스트 형태로 노출됨",
+        "No : 정책 문서 관리용 순번 값",
+        "문서 제목",
+        "정책 문서의 대표 제목",
+        "카테고리 : 정책 문서 유형 분류 값",
+        "버전",
+        "정책 문서의 현재 버전 정보",
+        "동일 문서의 개정 이력을 구분하기 위한 기준",
+        "노출여부",
+        "정책 문서의 현재 적용 상태",
+        "노출 상태인 경우 서비스 화면에 적용 중임을 의미함",
+        "등록자 : 해당 정책 문서를 등록한 관리자 계정",
+        "최종 수정일 : 정책 문서가 마지막으로 수정된 일자",
+        "버전 보기 : 클릭 시 해당 정책 문서의 버전 이력 목록을",
+        "확인할 수 있는 화면(ADM_055)을 호출함",
+        "리스트행 클릭 시 해당하는 문서의 상세화면(ADM_054)",
+        "을 호출함"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-4"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

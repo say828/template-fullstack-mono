@@ -1,0 +1,12 @@
+[
+  {
+    "id": "TADM_001",
+    "title": "Admin Login",
+    "tags": ["public", "auth"]
+  },
+  {
+    "id": "TADM_002",
+    "title": "Admin Forgot Password",
+    "tags": ["public", "auth"]
+  }
+]

@@ -1,0 +1,455 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_004",
+  "screen_name": "비밀번호변경",
+  "page_number": 5,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-005-surface-01",
+  "primary_route": "/admin/password",
+  "access": "role:ADMIN",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_004",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_004/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_004/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_004/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_004/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 11,
+    "ordered_tokens": [
+      "logo",
+      "top bar",
+      "reset card",
+      "reset title",
+      "guide text",
+      "email label",
+      "email input",
+      "role selector",
+      "send button",
+      "support note"
+    ],
+    "blocks": [
+      {
+        "id": "logo",
+        "token": "logo",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 4,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 4,
+            "width": 4
+          }
+        ]
+      },
+      {
+        "id": "top-bar",
+        "token": "top bar",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 5,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 5,
+            "column_end": 24,
+            "width": 20
+          }
+        ]
+      },
+      {
+        "id": "reset-card",
+        "token": "reset card",
+        "row_start": 3,
+        "row_end": 9,
+        "column_start": 7,
+        "column_end": 18,
+        "segment_count": 12,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 7,
+            "column_end": 18,
+            "width": 12
+          },
+          {
+            "row": 4,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 5,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 5,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 6,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 6,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 7,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 7,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 8,
+            "column_start": 7,
+            "column_end": 8,
+            "width": 2
+          },
+          {
+            "row": 8,
+            "column_start": 17,
+            "column_end": 18,
+            "width": 2
+          },
+          {
+            "row": 9,
+            "column_start": 7,
+            "column_end": 18,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "reset-title",
+        "token": "reset title",
+        "row_start": 4,
+        "row_end": 4,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "guide-text",
+        "token": "guide text",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "email-label",
+        "token": "email label",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 9,
+        "column_end": 10,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 9,
+            "column_end": 10,
+            "width": 2
+          }
+        ]
+      },
+      {
+        "id": "email-input",
+        "token": "email input",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 11,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 11,
+            "column_end": 16,
+            "width": 6
+          }
+        ]
+      },
+      {
+        "id": "role-selector",
+        "token": "role selector",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "send-button",
+        "token": "send button",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 9,
+        "column_end": 16,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 9,
+            "column_end": 16,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "support-note",
+        "token": "support note",
+        "row_start": 10,
+        "row_end": 10,
+        "column_start": 7,
+        "column_end": 18,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 10,
+            "column_start": 7,
+            "column_end": 18,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "기존 비밀번호 입력",
+      "lines": [
+        "현재 로그인된 관리자 계정의 기존 비밀번호 입력 필드.",
+        "입력 값은 마스킹 처리되며, 변경 요청 시 계정 정보와 대",
+        "조 검증 기준 데이터로 사용됨.",
+        "기존 비밀번호 불일치 시 이후 단계 진행 불가 상태 유지",
+        "됨"
+      ],
+      "matched_block_ids": [
+        "logo"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "새 비밀번호 입력",
+      "lines": [
+        "신규 비밀번호 입력 필드",
+        "영문 대소문자, 숫자, 특수문자 중 2가지 이상 조합,",
+        "10~16자 규칙을 충족해야 하며, 규칙 불충족 시 오류 상",
+        "태 유지됨."
+      ],
+      "matched_block_ids": [
+        "top-bar"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "새 비밀번호 확인",
+      "lines": [
+        "신규 비밀번호 재입력 필드",
+        "2번 항목과 값 불일치 시 즉시 오류 메시지 노출되며 변",
+        "경 확정 불가 상태 유지됨."
+      ],
+      "matched_block_ids": [
+        "reset-card"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "취소 버튼",
+      "lines": [
+        "변경 프로세스 중단 및 팝업 닫힘",
+        "입력된 모든 데이터 폐기됨"
+      ],
+      "matched_block_ids": [
+        "send-button"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "비밀번호 변경 버튼",
+      "lines": [
+        "모든 검증 조건 충족 시 활성화되며, 클릭 시 비밀번호 변",
+        "경 처리 요청 실행",
+        "변경 완료 시 관리자 계정 인증 정보 즉시 갱신됨.",
+        "새 비밀번호로 다시 로그인해 주세요.",
+        "확인"
+      ],
+      "matched_block_ids": [
+        "send-button"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "logo"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "top-bar"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "reset-card"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "send-button"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "send-button"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "logo",
+        "token": "logo",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "top-bar",
+        "token": "top bar",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "reset-card",
+        "token": "reset card",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "reset-title",
+        "token": "reset title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "guide-text",
+        "token": "guide text",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "email-label",
+        "token": "email label",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "email-input",
+        "token": "email input",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "role-selector",
+        "token": "role selector",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "send-button",
+        "token": "send button",
+        "requirement_ids": [
+          "REQ-4",
+          "REQ-5"
+        ]
+      },
+      {
+        "block_id": "support-note",
+        "token": "support note",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

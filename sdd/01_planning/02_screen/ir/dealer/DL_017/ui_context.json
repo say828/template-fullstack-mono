@@ -1,0 +1,346 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "dealer",
+  "screen_code": "DL_017",
+  "screen_name": "거래결제(진행중)",
+  "page_number": 18,
+  "source_spec": "sdd/01_planning/02_screen/ir/dealer/dealer_screen_spec.pdf",
+  "surface_id": "page-018-surface-01",
+  "primary_route": "/dealer/transactions",
+  "access": "role:DEALER",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "dealer-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "dealer-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/dealer/DL_017",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/dealer/DL_017/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/dealer/DL_017/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/dealer/DL_017/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/dealer/DL_017/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "거래 상태 집계 영역",
+      "lines": [
+        "딜러 계정 기준 거래 데이터를 진행중 / 정산대기 / 완료",
+        "로 실시간 집계하여 표시",
+        "집계 수치는 현재 딜러의 유효 거래 레코드 기준으로 산",
+        "출됨",
+        "상태 변경 발생 시 즉시 갱신됨"
+      ],
+      "matched_block_ids": [
+        "screen-action",
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "거래 필터 영역",
+      "lines": [
+        "거래 단계 필터: 검차 일정 조율 / 검차완료 / 감가 협의 /",
+        "인도 진행 / 송금·정산",
+        "거래 유형, 기간, 정렬, 검색 조건이 복합 적용됨",
+        "필터 변경 시 서버 조회 기준 즉시 반영됨"
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "거래 탭 영역",
+      "lines": [
+        "진행 중 거래 / 완료된 거래로 거래 데이터 분리 표시",
+        "탭 변경 시 거래 상태 기준 자동 필터링됨",
+        "완료된 거래 탭 클릭 시 (DL_018) 화면으로 탭 전환"
+      ],
+      "matched_block_ids": [
+        "primary-list",
+        "supporting-panel"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "거래 리스트 영역",
+      "lines": [
+        "각 행은 하나의 낙찰 확정 거래 단위이며, 해당 거래의 현",
+        "재 처리 단계와 다음 분기 화면을 결정하는 기준 정보를",
+        "포함함.",
+        "거래번호: 낙찰 확정 시 생성되는 거래 고유 식별값",
+        "매물 정보: 차량 요약 정보",
+        "거래 유형: 국내 거래 / 해외(수출)",
+        "낙찰가: 최종 낙찰 금액",
+        "감가 확정가: 감가 협의 종료 후 확정 금액",
+        "현재 단계: 거래 처리 단계 값",
+        "상태: 각 단계의 세부 진행 상태",
+        "액션: 다음 처리 화면으로 이동하는 제어 버튼"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "거래·결제 진행 버튼",
+      "lines": [
+        "클릭 시 해당 거래 행의 현재 단계 값 기준으로 다음 화면",
+        "분기",
+        "각 단계에 따라 클릭 시 해당하는 거래결제 상세 화면으",
+        "로(DL_020 등) 이동"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "screen-action",
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "primary-list",
+          "supporting-panel"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-4",
+          "REQ-5"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

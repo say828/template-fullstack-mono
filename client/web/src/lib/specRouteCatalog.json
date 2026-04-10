@@ -1,0 +1,30 @@
+[
+  {
+    "id": "TWEB_001",
+    "route": "/",
+    "binding": "direct",
+    "notes": ["Customer-facing landing route."],
+    "tags": ["landing"]
+  },
+  {
+    "id": "TWEB_002",
+    "route": "/login",
+    "binding": "direct",
+    "notes": ["Public login route."],
+    "tags": ["auth"]
+  },
+  {
+    "id": "TWEB_003",
+    "route": "/signup",
+    "binding": "direct",
+    "notes": ["Role selection before signup."],
+    "tags": ["auth"]
+  },
+  {
+    "id": "TWEB_004",
+    "route": "/support/notices",
+    "binding": "direct",
+    "notes": ["Public support notice list."],
+    "tags": ["support"]
+  }
+]

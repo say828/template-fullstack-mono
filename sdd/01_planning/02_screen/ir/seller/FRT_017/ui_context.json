@@ -1,0 +1,336 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "seller",
+  "screen_code": "FRT_017",
+  "screen_name": "상세보기(입찰마감)",
+  "page_number": 18,
+  "source_spec": "sdd/01_planning/02_screen/ir/seller/seller_screen_spec.pdf",
+  "surface_id": "page-018-surface-01",
+  "primary_route": "/seller/vehicles/:vehicleId/detail/closed",
+  "access": "role:SELLER",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "seller-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "seller-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/seller/FRT_017",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/seller/FRT_017/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/seller/FRT_017/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/seller/FRT_017/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/seller/FRT_017/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 9,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "hero media",
+      "closed bidding summary",
+      "vehicle identity",
+      "vehicle basics",
+      "photo strip",
+      "trade progress",
+      "recent activity",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "hero-media",
+        "token": "hero media",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "closed-bidding-summary",
+        "token": "closed bidding summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "vehicle-identity",
+        "token": "vehicle identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "vehicle-basics",
+        "token": "vehicle basics",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "photo-strip",
+        "token": "photo strip",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "trade-progress",
+        "token": "trade progress",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "recent-activity",
+        "token": "recent activity",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 9,
+        "row_end": 9,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 9,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "입찰 종료 요약 패널",
+      "lines": [
+        "입찰 상태가 ‘입찰 마감’으로 확정된 차량의 거래 요약 정",
+        "보가 표시됨.",
+        "현재 최고 입찰가, 입찰 건수, 입찰 종료 일시가 확정 데이",
+        "터로 노출되며, 입찰 단계가 종료되었음을 명확히 인지시",
+        "키는 상태 경고 메시지 영역이 함께 노출됨.",
+        "‘입찰자 선택하기’ 버튼은 입찰 마감이 서버 기준으로 확",
+        "정된 경우에만 노출되며, 클릭 시 입찰자 선택(FRT_018)",
+        "화면으로 이동함.",
+        "낙찰자를 선택하는 순간부터 입찰 단계로의 복귀는 불가",
+        "하며, 해당 차량의 거래 흐름은 감가협의 단계로 전환됨"
+      ],
+      "matched_block_ids": [
+        "closed-bidding-summary"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "closed-bidding-summary"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "hero-media",
+        "token": "hero media",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "closed-bidding-summary",
+        "token": "closed bidding summary",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "vehicle-identity",
+        "token": "vehicle identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "vehicle-basics",
+        "token": "vehicle basics",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "photo-strip",
+        "token": "photo strip",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "trade-progress",
+        "token": "trade progress",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "recent-activity",
+        "token": "recent activity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

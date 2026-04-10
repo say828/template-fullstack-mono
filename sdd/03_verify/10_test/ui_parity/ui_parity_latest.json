@@ -1,0 +1,1911 @@
+{
+  "generated_at": "2026-03-11T04:56:07.740Z",
+  "repo": "template",
+  "phase": "dev",
+  "domains": [],
+  "runner": "playwright-direct",
+  "base_url": "http://web.dev.example.com",
+  "viewport": {
+    "width": 1440,
+    "height": 1024
+  },
+  "contract_path": "sdd/02_plan/10_test/ui_parity_contract.yaml",
+  "artifacts_root": "sdd/03_verify/10_test/ui_parity/20260311045607",
+  "proof": {
+    "mode": "strict",
+    "screen_catalog": "frontend/src/lib/specScreens.json",
+    "route_catalog": "frontend/src/lib/specRouteCatalog.json",
+    "total_catalog_screens": 149,
+    "contract_screens": 149,
+    "direct_route_screens": 105,
+    "blocking_issues": [
+      "non_direct_route_bindings:44"
+    ],
+    "screens": [
+      {
+        "id": "FRT_049",
+        "domain": "seller",
+        "title": "1:1 문의",
+        "source_file": "specs/target/seller/1_1 문의.md",
+        "route_key": "seller:1_1 문의",
+        "route": "/support/inquiries",
+        "contract_route": "/support/inquiries",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_028",
+        "domain": "seller",
+        "title": "감가내용확인",
+        "source_file": "specs/target/seller/감가내용확인.md",
+        "route_key": "seller:감가내용확인",
+        "route": "/seller/vehicles/:vehicleId/depreciation/completed",
+        "contract_route": "/seller/vehicles/:vehicleId/depreciation/completed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_026",
+        "domain": "seller",
+        "title": "감가재협의요청",
+        "source_file": "specs/target/seller/감가재협의요청.md",
+        "route_key": "seller:감가재협의요청",
+        "route": "/seller/vehicles/:vehicleId/depreciation/renegotiation",
+        "contract_route": "/seller/vehicles/:vehicleId/depreciation/renegotiation",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_025",
+        "domain": "seller",
+        "title": "감가협의",
+        "source_file": "specs/target/seller/감가협의.md",
+        "route_key": "seller:감가협의",
+        "route": "/seller/vehicles/:vehicleId/depreciation",
+        "contract_route": "/seller/vehicles/:vehicleId/depreciation",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_035",
+        "domain": "seller",
+        "title": "거래 정산 내역",
+        "source_file": "specs/target/seller/거래 정산 내역.md",
+        "route_key": "seller:거래 정산 내역",
+        "route": "/seller/settlement",
+        "contract_route": "/seller/settlement",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_023",
+        "domain": "seller",
+        "title": "검차일정상세",
+        "source_file": "specs/target/seller/검차일정상세.md",
+        "route_key": "seller:검차일정상세",
+        "route": "/seller/vehicles/:vehicleId/inspection/detail",
+        "contract_route": "/seller/vehicles/:vehicleId/inspection/detail",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_020",
+        "domain": "seller",
+        "title": "검차일정확인",
+        "source_file": "specs/target/seller/검차일정확인.md",
+        "route_key": "seller:검차일정확인",
+        "route": "/seller/vehicles/:vehicleId/inspection",
+        "contract_route": "/seller/vehicles/:vehicleId/inspection",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_038",
+        "domain": "seller",
+        "title": "계정정보",
+        "source_file": "specs/target/seller/계정정보.md",
+        "route_key": "seller:계정정보",
+        "route": "/settings/account",
+        "contract_route": "/settings/account",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_047",
+        "domain": "seller",
+        "title": "공지사항",
+        "source_file": "specs/target/seller/공지사항.md",
+        "route_key": "seller:공지사항",
+        "route": "/seller/support/notices",
+        "contract_route": "/seller/support/notices",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_048",
+        "domain": "seller",
+        "title": "공지사항상세",
+        "source_file": "specs/target/seller/공지사항상세.md",
+        "route_key": "seller:공지사항상세",
+        "route": "/seller/support/notices/:noticeId",
+        "contract_route": "/seller/support/notices/:noticeId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_013",
+        "domain": "seller",
+        "title": "내차량",
+        "source_file": "specs/target/seller/내차량.md",
+        "route_key": "seller:내차량",
+        "route": "/seller/vehicles",
+        "contract_route": "/seller/vehicles",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_010",
+        "domain": "seller",
+        "title": "내차량(초기)",
+        "source_file": "specs/target/seller/내차량_초기.md",
+        "route_key": "seller:내차량_초기",
+        "route": "/seller/vehicles/initial",
+        "contract_route": "/seller/vehicles/initial",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_021",
+        "domain": "seller",
+        "title": "다른일정요청",
+        "source_file": "specs/target/seller/다른일정요청.md",
+        "route_key": "seller:다른일정요청",
+        "route": "/seller/vehicles/:vehicleId/inspection/reschedule",
+        "contract_route": "/seller/vehicles/:vehicleId/inspection/reschedule",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_034",
+        "domain": "seller",
+        "title": "등록내용확인",
+        "source_file": "specs/target/seller/등록내용확인.md",
+        "route_key": "seller:등록내용확인",
+        "route": "/seller/vehicles/register/confirm",
+        "contract_route": "/seller/vehicles/register/confirm",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_008",
+        "domain": "seller",
+        "title": "딜러 회원가입",
+        "source_file": "specs/target/seller/딜러 회원가입.md",
+        "route_key": "seller:딜러 회원가입",
+        "route": "/signup/dealer",
+        "contract_route": "/signup/dealer",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_009",
+        "domain": "seller",
+        "title": "딜러 회원가입완료",
+        "source_file": "specs/target/seller/딜러 회원가입완료.md",
+        "route_key": "seller:딜러 회원가입완료",
+        "route": "/signup/dealer/complete",
+        "contract_route": "/signup/dealer/complete",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_001",
+        "domain": "seller",
+        "title": "랜딩페이지",
+        "source_file": "specs/target/seller/랜딩페이지.md",
+        "route_key": "seller:랜딩페이지",
+        "route": "/",
+        "contract_route": "/",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_003",
+        "domain": "seller",
+        "title": "로그인(딜러)",
+        "source_file": "specs/target/seller/로그인_딜러.md",
+        "route_key": "seller:로그인_딜러",
+        "route": "/login?role=dealer",
+        "contract_route": "/login?role=dealer",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_002",
+        "domain": "seller",
+        "title": "로그인(판매자)",
+        "source_file": "specs/target/seller/로그인_판매자.md",
+        "route_key": "seller:로그인_판매자",
+        "route": "/login?role=seller",
+        "contract_route": "/login?role=seller",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_043",
+        "domain": "seller",
+        "title": "보안 비밀번호",
+        "source_file": "specs/target/seller/보안 비밀번호.md",
+        "route_key": "seller:보안 비밀번호",
+        "route": "/settings/security",
+        "contract_route": "/settings/security",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_004",
+        "domain": "seller",
+        "title": "비밀번호찾기",
+        "source_file": "specs/target/seller/비밀번호찾기.md",
+        "route_key": "seller:비밀번호찾기",
+        "route": "/forgot-password?role=seller",
+        "contract_route": "/forgot-password?role=seller",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_024",
+        "domain": "seller",
+        "title": "상세보기(감가협의전)",
+        "source_file": "specs/target/seller/상세보기_감가협의전.md",
+        "route_key": "seller:상세보기_감가협의전",
+        "route": "/seller/vehicles/:vehicleId/detail/depreciation-pending",
+        "contract_route": "/seller/vehicles/:vehicleId/detail/depreciation-pending",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_027",
+        "domain": "seller",
+        "title": "상세보기(감가협의후)",
+        "source_file": "specs/target/seller/상세보기_감가협의후.md",
+        "route_key": "seller:상세보기_감가협의후",
+        "route": "/seller/vehicles/:vehicleId/detail/depreciation-completed",
+        "contract_route": "/seller/vehicles/:vehicleId/detail/depreciation-completed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_031",
+        "domain": "seller",
+        "title": "상세보기(거래완료)",
+        "source_file": "specs/target/seller/상세보기_거래완료.md",
+        "route_key": "seller:상세보기_거래완료",
+        "route": "/seller/vehicles/:vehicleId/detail/completed",
+        "contract_route": "/seller/vehicles/:vehicleId/detail/completed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_019",
+        "domain": "seller",
+        "title": "상세보기(검차일정전)",
+        "source_file": "specs/target/seller/상세보기_검차일정전.md",
+        "route_key": "seller:상세보기_검차일정전",
+        "route": "/seller/vehicles/:vehicleId/detail/inspection-pending",
+        "contract_route": "/seller/vehicles/:vehicleId/detail/inspection-pending",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_022",
+        "domain": "seller",
+        "title": "상세보기(검차일정후)",
+        "source_file": "specs/target/seller/상세보기_검차일정후.md",
+        "route_key": "seller:상세보기_검차일정후",
+        "route": "/seller/vehicles/:vehicleId/detail/inspection-completed",
+        "contract_route": "/seller/vehicles/:vehicleId/detail/inspection-completed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_029",
+        "domain": "seller",
+        "title": "상세보기(인도정산)",
+        "source_file": "specs/target/seller/상세보기_인도정산.md",
+        "route_key": "seller:상세보기_인도정산",
+        "route": "/seller/vehicles/:vehicleId/detail/delivery-settlement",
+        "contract_route": "/seller/vehicles/:vehicleId/detail/delivery-settlement",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_017",
+        "domain": "seller",
+        "title": "상세보기(입찰마감)",
+        "source_file": "specs/target/seller/상세보기_입찰마감.md",
+        "route_key": "seller:상세보기_입찰마감",
+        "route": "/seller/vehicles/:vehicleId/detail/closed",
+        "contract_route": "/seller/vehicles/:vehicleId/detail/closed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_014",
+        "domain": "seller",
+        "title": "상세보기(입찰중)",
+        "source_file": "specs/target/seller/상세보기_입찰중.md",
+        "route_key": "seller:상세보기_입찰중",
+        "route": "/seller/vehicles/:vehicleId",
+        "contract_route": "/seller/vehicles/:vehicleId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_011",
+        "domain": "seller",
+        "title": "알림",
+        "source_file": "specs/target/seller/알림.md",
+        "route_key": "seller:알림",
+        "route": "/support/notifications",
+        "contract_route": "/support/notifications",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_042",
+        "domain": "seller",
+        "title": "알림설정",
+        "source_file": "specs/target/seller/알림설정.md",
+        "route_key": "seller:알림설정",
+        "route": "/settings/notifications",
+        "contract_route": "/settings/notifications",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_045",
+        "domain": "seller",
+        "title": "약관 및 회원탈퇴",
+        "source_file": "specs/target/seller/약관 및 회원탈퇴.md",
+        "route_key": "seller:약관 및 회원탈퇴",
+        "route": "/settings/terms",
+        "contract_route": "/settings/terms",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_044",
+        "domain": "seller",
+        "title": "언어 및 지역",
+        "source_file": "specs/target/seller/언어 및 지역.md",
+        "route_key": "seller:언어 및 지역",
+        "route": "/settings/locale",
+        "contract_route": "/settings/locale",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_015",
+        "domain": "seller",
+        "title": "이미지보기",
+        "source_file": "specs/target/seller/이미지보기.md",
+        "route_key": "seller:이미지보기",
+        "route": "/seller/vehicles/:vehicleId/images",
+        "contract_route": "/seller/vehicles/:vehicleId/images",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_030",
+        "domain": "seller",
+        "title": "인도 정산 진행",
+        "source_file": "specs/target/seller/인도 정산 진행.md",
+        "route_key": "seller:인도 정산 진행",
+        "route": "/seller/vehicles/:vehicleId/delivery-settlement-progress",
+        "contract_route": "/seller/vehicles/:vehicleId/delivery-settlement-progress",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_032",
+        "domain": "seller",
+        "title": "인도/정산 상세",
+        "source_file": "specs/target/seller/인도_정산 상세.md",
+        "route_key": "seller:인도_정산 상세",
+        "route": "/seller/vehicles/:vehicleId/delivery-settlement-progress/detail",
+        "contract_route": "/seller/vehicles/:vehicleId/delivery-settlement-progress/detail",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_018",
+        "domain": "seller",
+        "title": "입찰자선택",
+        "source_file": "specs/target/seller/입찰자선택.md",
+        "route_key": "seller:입찰자선택",
+        "route": "/seller/vehicles/:vehicleId/winner",
+        "contract_route": "/seller/vehicles/:vehicleId/winner",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_016",
+        "domain": "seller",
+        "title": "입찰현황",
+        "source_file": "specs/target/seller/입찰현황.md",
+        "route_key": "seller:입찰현황",
+        "route": "/seller/vehicles/:vehicleId/bids",
+        "contract_route": "/seller/vehicles/:vehicleId/bids",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_046",
+        "domain": "seller",
+        "title": "자주묻는질문",
+        "source_file": "specs/target/seller/자주묻는질문.md",
+        "route_key": "seller:자주묻는질문",
+        "route": "/support/faqs",
+        "contract_route": "/support/faqs",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_039",
+        "domain": "seller",
+        "title": "정산계좌",
+        "source_file": "specs/target/seller/정산계좌.md",
+        "route_key": "seller:정산계좌",
+        "route": "/settings/settlement",
+        "contract_route": "/settings/settlement",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_041",
+        "domain": "seller",
+        "title": "정산계좌등록수정",
+        "source_file": "specs/target/seller/정산계좌등록수정.md",
+        "route_key": "seller:정산계좌등록수정",
+        "route": "/settings/settlement/edit",
+        "contract_route": "/settings/settlement/edit",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_040",
+        "domain": "seller",
+        "title": "정산계좌미등록",
+        "source_file": "specs/target/seller/정산계좌미등록.md",
+        "route_key": "seller:정산계좌미등록",
+        "route": "/settings/settlement/empty",
+        "contract_route": "/settings/settlement/empty",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_037",
+        "domain": "seller",
+        "title": "정산대기상세",
+        "source_file": "specs/target/seller/정산대기상세.md",
+        "route_key": "seller:정산대기상세",
+        "route": "/seller/settlement/pending/:vehicleId",
+        "contract_route": "/seller/settlement/pending/:vehicleId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_036",
+        "domain": "seller",
+        "title": "정산완료상세",
+        "source_file": "specs/target/seller/정산완료상세.md",
+        "route_key": "seller:정산완료상세",
+        "route": "/seller/settlement/completed/:vehicleId",
+        "contract_route": "/seller/settlement/completed/:vehicleId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_033",
+        "domain": "seller",
+        "title": "차량등록",
+        "source_file": "specs/target/seller/차량등록.md",
+        "route_key": "seller:차량등록",
+        "route": "/seller/vehicles/register",
+        "contract_route": "/seller/vehicles/register",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_006",
+        "domain": "seller",
+        "title": "판매자 회원가입",
+        "source_file": "specs/target/seller/판매자 회원가입.md",
+        "route_key": "seller:판매자 회원가입",
+        "route": "/signup/seller",
+        "contract_route": "/signup/seller",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_007",
+        "domain": "seller",
+        "title": "판매자 회원가입완료",
+        "source_file": "specs/target/seller/판매자 회원가입완료.md",
+        "route_key": "seller:판매자 회원가입완료",
+        "route": "/signup/seller/complete",
+        "contract_route": "/signup/seller/complete",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_012",
+        "domain": "seller",
+        "title": "프로필",
+        "source_file": "specs/target/seller/프로필.md",
+        "route_key": "seller:프로필",
+        "route": "/settings/profile",
+        "contract_route": "/settings/profile",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "FRT_005",
+        "domain": "seller",
+        "title": "회원가입 유형선택",
+        "source_file": "specs/target/seller/회원가입 유형선택.md",
+        "route_key": "seller:회원가입 유형선택",
+        "route": "/signup",
+        "contract_route": "/signup",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_001",
+        "domain": "admin",
+        "title": "로그인",
+        "source_file": "specs/target/admin/관리자 로그인 완료 _ 프로필.md",
+        "route_key": "admin:로그인",
+        "route": "/login",
+        "contract_route": "/login",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_002",
+        "domain": "admin",
+        "title": "비밀번호 찾기",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:비밀번호 찾기",
+        "route": "/forgot-password",
+        "contract_route": "/forgot-password",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_003",
+        "domain": "admin",
+        "title": "인덱스",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:인덱스",
+        "route": "/admin/dashboard",
+        "contract_route": "/admin/dashboard",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_004",
+        "domain": "admin",
+        "title": "비밀번호변경",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:비밀번호변경",
+        "route": "/admin/password",
+        "contract_route": "/admin/password",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_005",
+        "domain": "admin",
+        "title": "알림",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:알림",
+        "route": "/admin/notifications",
+        "contract_route": "/admin/notifications",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_006",
+        "domain": "admin",
+        "title": "대시보드",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:대시보드",
+        "route": "/admin/dashboard",
+        "contract_route": "/admin/dashboard",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_007",
+        "domain": "admin",
+        "title": "거래관리",
+        "source_file": "specs/target/admin/거래관리 목록.md",
+        "route_key": "admin:거래관리",
+        "route": "/admin/trades",
+        "contract_route": "/admin/trades",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_008",
+        "domain": "admin",
+        "title": "거래관리요약",
+        "source_file": "specs/target/admin/거래관리요약.md",
+        "route_key": "admin:거래관리요약",
+        "route": "/admin/trades/summary",
+        "contract_route": "/admin/trades/summary",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_009",
+        "domain": "admin",
+        "title": "거래상세(입찰대기)",
+        "source_file": "specs/target/admin/거래 상세.md",
+        "route_key": "admin:거래상세(입찰대기)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_010",
+        "domain": "admin",
+        "title": "거래상세(입찰완료)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(입찰완료)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_011",
+        "domain": "admin",
+        "title": "거래상세(검차)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(검차)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_012",
+        "domain": "admin",
+        "title": "거래상세(감가대기)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(감가대기)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_013",
+        "domain": "admin",
+        "title": "거래상세(감가)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(감가)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_014",
+        "domain": "admin",
+        "title": "거래상세(인도)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(인도)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_015",
+        "domain": "admin",
+        "title": "거래상세(송금정산)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(송금정산)",
+        "route": "/admin/remittances/:vehicleId",
+        "contract_route": "/admin/remittances/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_016",
+        "domain": "admin",
+        "title": "거래상세(상태이력)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(상태이력)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_017",
+        "domain": "admin",
+        "title": "관리자강제종료",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:관리자강제종료",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_018",
+        "domain": "admin",
+        "title": "거래상세(취소)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:거래상세(취소)",
+        "route": "/admin/trades/:vehicleId",
+        "contract_route": "/admin/trades/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_019",
+        "domain": "admin",
+        "title": "검차운영",
+        "source_file": "specs/target/admin/검차운영 목록.md",
+        "route_key": "admin:검차운영",
+        "route": "/admin/inspections",
+        "contract_route": "/admin/inspections",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_020",
+        "domain": "admin",
+        "title": "검차운영상세(제안필요)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:검차운영상세(제안필요)",
+        "route": "/admin/inspections/:vehicleId",
+        "contract_route": "/admin/inspections/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_021",
+        "domain": "admin",
+        "title": "검차운영상세(조율요청)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:검차운영상세(조율요청)",
+        "route": "/admin/inspections/:vehicleId",
+        "contract_route": "/admin/inspections/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_022",
+        "domain": "admin",
+        "title": "검차운영상세(응답대기)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:검차운영상세(응답대기)",
+        "route": "/admin/inspections/:vehicleId",
+        "contract_route": "/admin/inspections/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_023",
+        "domain": "admin",
+        "title": "검차운영상세(리포트미제출)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:검차운영상세(리포트미제출)",
+        "route": "/admin/inspections/:vehicleId",
+        "contract_route": "/admin/inspections/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_024",
+        "domain": "admin",
+        "title": "검차운영상세(리포트제출)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:검차운영상세(리포트제출)",
+        "route": "/admin/inspections/:vehicleId",
+        "contract_route": "/admin/inspections/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_025",
+        "domain": "admin",
+        "title": "감가협의",
+        "source_file": "specs/target/admin/감가협의 목록.md",
+        "route_key": "admin:감가협의",
+        "route": "/admin/depreciations",
+        "contract_route": "/admin/depreciations",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_026",
+        "domain": "admin",
+        "title": "감가협의상세(제안필요)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:감가협의상세(제안필요)",
+        "route": "/admin/depreciations/:vehicleId",
+        "contract_route": "/admin/depreciations/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_027",
+        "domain": "admin",
+        "title": "감가협의상세(승인대기)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:감가협의상세(승인대기)",
+        "route": "/admin/depreciations/:vehicleId",
+        "contract_route": "/admin/depreciations/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_028",
+        "domain": "admin",
+        "title": "감가협의상세(재협의)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:감가협의상세(재협의)",
+        "route": "/admin/depreciations/:vehicleId",
+        "contract_route": "/admin/depreciations/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_029",
+        "domain": "admin",
+        "title": "인도관리",
+        "source_file": "specs/target/admin/인도관리 목록.md",
+        "route_key": "admin:인도관리",
+        "route": "/admin/deliveries",
+        "contract_route": "/admin/deliveries",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_030",
+        "domain": "admin",
+        "title": "인도관리상세(일정대기)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:인도관리상세(일정대기)",
+        "route": "/admin/deliveries/:vehicleId",
+        "contract_route": "/admin/deliveries/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_031",
+        "domain": "admin",
+        "title": "인도관리상세(승인대기)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:인도관리상세(승인대기)",
+        "route": "/admin/deliveries/:vehicleId",
+        "contract_route": "/admin/deliveries/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_032",
+        "domain": "admin",
+        "title": "인도관리상세(인도완료)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:인도관리상세(인도완료)",
+        "route": "/admin/deliveries/:vehicleId",
+        "contract_route": "/admin/deliveries/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_033",
+        "domain": "admin",
+        "title": "딜러송금관리",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:딜러송금관리",
+        "route": "/admin/remittances",
+        "contract_route": "/admin/remittances",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_034",
+        "domain": "admin",
+        "title": "송금관리상세",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:송금관리상세",
+        "route": "/admin/remittances/:vehicleId",
+        "contract_route": "/admin/remittances/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_035",
+        "domain": "admin",
+        "title": "판매자 정산관리",
+        "source_file": "specs/target/admin/판매자 정산 관리.md",
+        "route_key": "admin:판매자 정산관리",
+        "route": "/admin/settlements",
+        "contract_route": "/admin/settlements",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_036",
+        "domain": "admin",
+        "title": "판매자정산관리상세(대기)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:판매자정산관리상세(대기)",
+        "route": "/admin/settlements/:vehicleId",
+        "contract_route": "/admin/settlements/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_037",
+        "domain": "admin",
+        "title": "판매자정산관리상세(완료)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:판매자정산관리상세(완료)",
+        "route": "/admin/settlements/:vehicleId",
+        "contract_route": "/admin/settlements/:vehicleId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_038",
+        "domain": "admin",
+        "title": "판매자관리",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:판매자관리",
+        "route": "/admin/sellers",
+        "contract_route": "/admin/sellers",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_039",
+        "domain": "admin",
+        "title": "판매자상세(기본탭)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:판매자상세(기본탭)",
+        "route": "/admin/sellers/:sellerId",
+        "contract_route": "/admin/sellers/:sellerId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_040",
+        "domain": "admin",
+        "title": "판매자상세(차량이력)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:판매자상세(차량이력)",
+        "route": "/admin/sellers/:sellerId/history",
+        "contract_route": "/admin/sellers/:sellerId/history",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_041",
+        "domain": "admin",
+        "title": "블랙리스트",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:블랙리스트",
+        "route": "/admin/blacklist",
+        "contract_route": "/admin/blacklist",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_042",
+        "domain": "admin",
+        "title": "딜러관리",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:딜러관리",
+        "route": "/admin/dealers",
+        "contract_route": "/admin/dealers",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_043",
+        "domain": "admin",
+        "title": "딜러상세(승인대기)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:딜러상세(승인대기)",
+        "route": "/admin/dealers/:dealerId",
+        "contract_route": "/admin/dealers/:dealerId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_044",
+        "domain": "admin",
+        "title": "반려처리",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:반려처리",
+        "route": "/admin/dealers/:dealerId",
+        "contract_route": "/admin/dealers/:dealerId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_045",
+        "domain": "admin",
+        "title": "딜러상세",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:딜러상세",
+        "route": "/admin/dealers/:dealerId",
+        "contract_route": "/admin/dealers/:dealerId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_046",
+        "domain": "admin",
+        "title": "딜러상세(이력)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:딜러상세(이력)",
+        "route": "/admin/dealers/:dealerId/history",
+        "contract_route": "/admin/dealers/:dealerId/history",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_047",
+        "domain": "admin",
+        "title": "리포트",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:리포트",
+        "route": "/admin/reports",
+        "contract_route": "/admin/reports",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_048",
+        "domain": "admin",
+        "title": "FAQ관리",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:FAQ관리",
+        "route": "/admin/support/faqs",
+        "contract_route": "/admin/support/faqs",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_049",
+        "domain": "admin",
+        "title": "FAQ등록/상세",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:FAQ등록/상세",
+        "route": "/admin/support/faqs",
+        "contract_route": "/admin/support/faqs",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_050",
+        "domain": "admin",
+        "title": "공지사항관리",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:공지사항관리",
+        "route": "/admin/support/notices",
+        "contract_route": "/admin/support/notices",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_051",
+        "domain": "admin",
+        "title": "공지사항상세",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:공지사항상세",
+        "route": "/admin/support/notices",
+        "contract_route": "/admin/support/notices",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_052",
+        "domain": "admin",
+        "title": "공지사항등록",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:공지사항등록",
+        "route": "/admin/support/notices",
+        "contract_route": "/admin/support/notices",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_053",
+        "domain": "admin",
+        "title": "정책문서관리",
+        "source_file": "specs/target/admin/정책.md",
+        "route_key": "admin:정책문서관리",
+        "route": "/admin/policies",
+        "contract_route": "/admin/policies",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_054",
+        "domain": "admin",
+        "title": "정책등록/상세",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:정책등록/상세",
+        "route": "/admin/policies/:policyId",
+        "contract_route": "/admin/policies/:policyId",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_055",
+        "domain": "admin",
+        "title": "버전보기",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:버전보기",
+        "route": "/admin/version",
+        "contract_route": "/admin/version",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_056",
+        "domain": "admin",
+        "title": "문의 관리",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:문의 관리",
+        "route": "/admin/support/inquiries",
+        "contract_route": "/admin/support/inquiries",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_057",
+        "domain": "admin",
+        "title": "문의상세",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:문의상세",
+        "route": "/admin/support/inquiries/:inquiryId",
+        "contract_route": "/admin/support/inquiries/:inquiryId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_058",
+        "domain": "admin",
+        "title": "관리자계정관리",
+        "source_file": "specs/target/admin/관리자 권한관리.md",
+        "route_key": "admin:관리자계정관리",
+        "route": "/admin/accounts",
+        "contract_route": "/admin/accounts",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_059",
+        "domain": "admin",
+        "title": "계정등록/상세",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:계정등록/상세",
+        "route": "/admin/accounts/:accountId",
+        "contract_route": "/admin/accounts/:accountId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_060",
+        "domain": "admin",
+        "title": "미정의 화면(ADM_060)",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:미정의 화면(ADM_060)",
+        "route": "/admin/permissions",
+        "contract_route": "/admin/permissions",
+        "route_binding": "shared",
+        "has_contract_entry": true,
+        "issues": [
+          "route_binding:shared"
+        ]
+      },
+      {
+        "id": "ADM_061",
+        "domain": "admin",
+        "title": "권한그룹수정/등록",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:권한그룹수정/등록",
+        "route": "/admin/permissions/:groupCode",
+        "contract_route": "/admin/permissions/:groupCode",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "ADM_062",
+        "domain": "admin",
+        "title": "로그/감사",
+        "source_file": "specs/target/admin/INDEX.md",
+        "route_key": "admin:로그/감사",
+        "route": "/admin/audit/logs",
+        "contract_route": "/admin/audit/logs",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_001",
+        "domain": "dealer",
+        "title": "알림",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:알림",
+        "route": "/dealer/notifications",
+        "contract_route": "/dealer/notifications",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_002",
+        "domain": "dealer",
+        "title": "프로필",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:프로필",
+        "route": "/dealer/profile",
+        "contract_route": "/dealer/profile",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_003",
+        "domain": "dealer",
+        "title": "매물보기",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:매물보기",
+        "route": "/dealer/market",
+        "contract_route": "/dealer/market",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_004",
+        "domain": "dealer",
+        "title": "매물상세(정보)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:매물상세_정보",
+        "route": "/dealer/market/:vehicleId",
+        "contract_route": "/dealer/market/:vehicleId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_005",
+        "domain": "dealer",
+        "title": "매물상세(사진영상)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:매물상세_사진영상",
+        "route": "/dealer/market/:vehicleId/photos",
+        "contract_route": "/dealer/market/:vehicleId/photos",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_006",
+        "domain": "dealer",
+        "title": "이미지보기",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:이미지보기",
+        "route": "/dealer/market/:vehicleId/image",
+        "contract_route": "/dealer/market/:vehicleId/image",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_007",
+        "domain": "dealer",
+        "title": "매물상세(검차감가안내)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:매물상세_검차감가안내",
+        "route": "/dealer/market/:vehicleId/inspection",
+        "contract_route": "/dealer/market/:vehicleId/inspection",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_008",
+        "domain": "dealer",
+        "title": "매물상세(거래조건)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:매물상세_거래조건",
+        "route": "/dealer/market/:vehicleId/terms",
+        "contract_route": "/dealer/market/:vehicleId/terms",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_009",
+        "domain": "dealer",
+        "title": "입찰참여",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:입찰참여",
+        "route": "/dealer/market/:vehicleId/bid",
+        "contract_route": "/dealer/market/:vehicleId/bid",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_010",
+        "domain": "dealer",
+        "title": "나의입찰",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:나의입찰",
+        "route": "/dealer/bids",
+        "contract_route": "/dealer/bids",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_011",
+        "domain": "dealer",
+        "title": "입찰가수정",
+        "source_file": "specs/target/dealer/재입찰 가능 상태.md",
+        "route_key": "dealer:입찰가수정",
+        "route": "/dealer/bids/:vehicleId/edit",
+        "contract_route": "/dealer/bids/:vehicleId/edit",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_012",
+        "domain": "dealer",
+        "title": "입찰상세(입찰중)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:입찰상세_입찰중",
+        "route": "/dealer/bids/:vehicleId/detail/open",
+        "contract_route": "/dealer/bids/:vehicleId/detail/open",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_013",
+        "domain": "dealer",
+        "title": "입찰상세(마감)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:입찰상세_마감",
+        "route": "/dealer/bids/:vehicleId/detail/closed",
+        "contract_route": "/dealer/bids/:vehicleId/detail/closed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_014",
+        "domain": "dealer",
+        "title": "입찰상세(미낙찰)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:입찰상세_미낙찰",
+        "route": "/dealer/bids/:vehicleId/detail/lost",
+        "contract_route": "/dealer/bids/:vehicleId/detail/lost",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_015",
+        "domain": "dealer",
+        "title": "입찰상세(낙찰)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:입찰상세_낙찰",
+        "route": "/dealer/bids/:vehicleId/detail/won",
+        "contract_route": "/dealer/bids/:vehicleId/detail/won",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_016",
+        "domain": "dealer",
+        "title": "입찰상세(취소됨)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:입찰상세_취소됨",
+        "route": "/dealer/bids/:vehicleId/detail/cancelled",
+        "contract_route": "/dealer/bids/:vehicleId/detail/cancelled",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_017",
+        "domain": "dealer",
+        "title": "거래결제(진행중)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제_진행중",
+        "route": "/dealer/transactions",
+        "contract_route": "/dealer/transactions",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_018",
+        "domain": "dealer",
+        "title": "거래결제(완료)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제_완료",
+        "route": "/dealer/transactions/completed",
+        "contract_route": "/dealer/transactions/completed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_019",
+        "domain": "dealer",
+        "title": "영수증증빙",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:영수증증빙",
+        "route": "/dealer/transactions/:vehicleId/receipt",
+        "contract_route": "/dealer/transactions/:vehicleId/receipt",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_020",
+        "domain": "dealer",
+        "title": "거래결제상세(검차일정)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_검차일정",
+        "route": "/dealer/transactions/:vehicleId/detail/inspection",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/inspection",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_021",
+        "domain": "dealer",
+        "title": "거래결제상세(검차일정확정)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_검차일정확정",
+        "route": "/dealer/transactions/:vehicleId/detail/inspection-confirmed",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/inspection-confirmed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_022",
+        "domain": "dealer",
+        "title": "거래결제상세(감가입력전)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_감가입력전",
+        "route": "/dealer/transactions/:vehicleId/detail/depreciation-waiting",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/depreciation-waiting",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_023",
+        "domain": "dealer",
+        "title": "감가금액입력",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:감가금액입력",
+        "route": "/dealer/transactions/:vehicleId/depreciation",
+        "contract_route": "/dealer/transactions/:vehicleId/depreciation",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_024",
+        "domain": "dealer",
+        "title": "거래결제상세(감가입력후)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_감가입력후",
+        "route": "/dealer/transactions/:vehicleId/detail/depreciation-submitted",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/depreciation-submitted",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_025",
+        "domain": "dealer",
+        "title": "거래결제상세(감가재협의)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_감가재협의",
+        "route": "/dealer/transactions/:vehicleId/detail/depreciation-renegotiation",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/depreciation-renegotiation",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_026",
+        "domain": "dealer",
+        "title": "거래결제상세(인도진행)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_인도진행",
+        "route": "/dealer/transactions/:vehicleId/detail/delivery",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/delivery",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_027",
+        "domain": "dealer",
+        "title": "감가합의내역",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:감가합의내역",
+        "route": "/dealer/transactions/:vehicleId/depreciation/history",
+        "contract_route": "/dealer/transactions/:vehicleId/depreciation/history",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_028",
+        "domain": "dealer",
+        "title": "거래결제상세(송금정산)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_송금정산",
+        "route": "/dealer/transactions/:vehicleId/detail/remittance",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/remittance",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_029",
+        "domain": "dealer",
+        "title": "거래결제상세(거래완료)",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:거래결제상세_거래완료",
+        "route": "/dealer/transactions/:vehicleId/detail/completed",
+        "contract_route": "/dealer/transactions/:vehicleId/detail/completed",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_030",
+        "domain": "dealer",
+        "title": "계정정보",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:계정정보",
+        "route": "/dealer/settings/account",
+        "contract_route": "/dealer/settings/account",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_031",
+        "domain": "dealer",
+        "title": "사업자/서류",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:사업자_서류",
+        "route": "/dealer/settings/business-docs",
+        "contract_route": "/dealer/settings/business-docs",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_032",
+        "domain": "dealer",
+        "title": "알림 설정",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:알림 설정",
+        "route": "/dealer/settings/notifications",
+        "contract_route": "/dealer/settings/notifications",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_033",
+        "domain": "dealer",
+        "title": "보안/비밀번호",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:보안_비밀번호",
+        "route": "/dealer/settings/security",
+        "contract_route": "/dealer/settings/security",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_034",
+        "domain": "dealer",
+        "title": "약관 및 회원탈퇴",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:약관 및 회원탈퇴",
+        "route": "/dealer/settings/terms",
+        "contract_route": "/dealer/settings/terms",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_035",
+        "domain": "dealer",
+        "title": "자주묻는질문",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:자주묻는질문",
+        "route": "/dealer/support/faqs",
+        "contract_route": "/dealer/support/faqs",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_036",
+        "domain": "dealer",
+        "title": "공지사항",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:공지사항",
+        "route": "/dealer/support/notices",
+        "contract_route": "/dealer/support/notices",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_037",
+        "domain": "dealer",
+        "title": "공지사항상세",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:공지사항상세",
+        "route": "/dealer/support/notices/:noticeId",
+        "contract_route": "/dealer/support/notices/:noticeId",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      },
+      {
+        "id": "DL_038",
+        "domain": "dealer",
+        "title": "1:1 문의",
+        "source_file": "specs/target/dealer/INDEX.md",
+        "route_key": "dealer:1_1 문의",
+        "route": "/dealer/support/inquiries",
+        "contract_route": "/dealer/support/inquiries",
+        "route_binding": "direct",
+        "has_contract_entry": true,
+        "issues": []
+      }
+    ]
+  },
+  "runtime": {},
+  "summary": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0,
+    "proof_passed": false
+  },
+  "screens": []
+}

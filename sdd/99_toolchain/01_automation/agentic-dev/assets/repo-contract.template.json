@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "name": "replace-service-name",
+  "spec": {
+    "planning_paths": [
+      "sdd/01_planning",
+      "sdd/02_plan"
+    ],
+    "canonical_targets_dir": "sdd/02_plan"
+  },
+  "frontend": {
+    "default_target": "platform",
+    "targets": {
+      "platform": {
+        "dir": "web/platform",
+        "adapter_path": "web/platform/scripts/ui-parity-platform-adapter.mjs",
+        "screens_path": "web/platform/src/lib/specScreens.json",
+        "routes_path": "web/platform/src/lib/specRouteCatalog.json",
+        "preview_url": "http://127.0.0.1:4301",
+        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_platform_contract.yaml",
+        "route_gap_output": "sdd/03_verify/10_test/ui_parity/platform_route_gap_latest.json",
+        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/platform_route_gap_latest.md",
+        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_platform_agentic_dev_latest.json"
+      },
+      "mobile": {
+        "dir": "web/mobile",
+        "adapter_path": "web/mobile/scripts/ui-parity-mobile-adapter.mjs",
+        "screens_path": "web/mobile/src/lib/specScreens.json",
+        "routes_path": "web/mobile/src/lib/specRouteCatalog.json",
+        "preview_url": "http://127.0.0.1:4302",
+        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_mobile_contract.yaml",
+        "route_gap_output": "sdd/03_verify/10_test/ui_parity/mobile_route_gap_latest.json",
+        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/mobile_route_gap_latest.md",
+        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_mobile_agentic_dev_latest.json"
+      },
+      "admin": {
+        "dir": "web/admin",
+        "adapter_path": "web/admin/scripts/ui-parity-admin-adapter.mjs",
+        "screens_path": "web/admin/src/lib/specScreens.json",
+        "routes_path": "web/admin/src/lib/specRouteCatalog.json",
+        "preview_url": "http://127.0.0.1:4400",
+        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_admin_contract.yaml",
+        "route_gap_output": "sdd/03_verify/10_test/ui_parity/admin_route_gap_latest.json",
+        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/admin_route_gap_latest.md",
+        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_admin_agentic_dev_latest.json"
+      },
+      "landing": {
+        "dir": "web/landing",
+        "adapter_path": "web/landing/scripts/ui-parity-landing-adapter.mjs",
+        "screens_path": "web/landing/src/lib/specScreens.json",
+        "routes_path": "web/landing/src/lib/specRouteCatalog.json",
+        "preview_url": "http://127.0.0.1:4300",
+        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_landing_contract.yaml",
+        "route_gap_output": "sdd/03_verify/10_test/ui_parity/landing_route_gap_latest.json",
+        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/landing_route_gap_latest.md",
+        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_landing_agentic_dev_latest.json"
+      }
+    }
+  },
+  "commands": {
+    "plan_audit": "bash sdd/99_toolchain/01_automation/agentic-dev/run_frontend_target.sh route_gap .",
+    "build": "bash sdd/99_toolchain/01_automation/agentic-dev/run_frontend_target.sh build .",
+    "proof": "bash sdd/99_toolchain/01_automation/agentic-dev/run_frontend_target.sh proof .",
+    "deploy_dev": "echo 'replace deploy_dev command' >&2",
+    "verify_dev": "echo 'replace verify_dev command' >&2"
+  },
+  "artifacts": {
+    "route_gap_output": "sdd/03_verify/10_test/ui_parity/platform_route_gap_latest.json",
+    "proof_output": "sdd/03_verify/10_test/ui_parity/replace_agentic_dev_latest.json"
+  },
+  "notes": [
+    "Replace the commands and proof output path after cloning the template.",
+    "plan_audit is expected to generate and gate a route-gap report before proof."
+  ]
+}

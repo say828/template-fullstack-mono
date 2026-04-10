@@ -1,0 +1,14 @@
+kind: ui-parity
+metadata:
+  service: template-fullstack-mono-admin
+  generated_by: sdd/99_toolchain/01_automation/ui-parity/cli/scaffold-contract.mjs
+spec:
+  target_base_url: http://127.0.0.1:4174
+  adapter_path: client/admin/scripts/ui-parity-admin-adapter.mjs
+screens:
+  - id: TADM_001
+    route: /login
+    reference_image: sdd/03_verify/10_test/ui_parity/reference/TADM_001.png
+  - id: TADM_002
+    route: /forgot-password
+    reference_image: sdd/03_verify/10_test/ui_parity/reference/TADM_002.png

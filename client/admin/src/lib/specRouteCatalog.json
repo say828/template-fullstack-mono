@@ -1,0 +1,16 @@
+[
+  {
+    "id": "TADM_001",
+    "route": "/login",
+    "binding": "direct",
+    "notes": ["Public admin login route."],
+    "tags": ["auth"]
+  },
+  {
+    "id": "TADM_002",
+    "route": "/forgot-password",
+    "binding": "direct",
+    "notes": ["Public admin password reset request route."],
+    "tags": ["auth"]
+  }
+]

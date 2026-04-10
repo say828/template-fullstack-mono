@@ -1,0 +1,353 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_028",
+  "screen_name": "감가협의상세(재협의)",
+  "page_number": 29,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-029-surface-01",
+  "primary_route": "/admin/depreciations/:vehicleId",
+  "access": "role:ADMIN",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_028",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_028/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_028/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_028/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_028/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "감가 제안 이력",
+      "lines": [
+        "본 영역은 거래 단위 감가 협의에서 딜러가 판매자에게",
+        "전달한 감가 제안 스냅샷을 고정 출력하는 영역이며, “재",
+        "협의” 상태의 기준점(직전 제안)으로 사용됨.",
+        "• 상단 금액 3종은 동일 이력 레코드에서 파생되는 값으",
+        "로 고정 계산됨.",
+        "원 낙찰가: 입찰 종료 시점에 확정된 낙찰 금액(낙찰 확정",
+        "레코드 기준)",
+        "제안 감가 금액: 딜러가 제안한 총 감가액(항목 합계와 정",
+        "합성 필수)",
+        "제안 후 최종 거래가(예상): 원 낙찰가에서 제안 감가 금",
+        "액을 차감한 값(표시 전용, 협의 종료 시 “최종 거래가”로",
+        "확정 전환됨)",
+        "• “감가 사유”는 항목 테이블의 상세 근거와 분리된 요약",
+        "텍스트이며, 운영상 분쟁 시에는 항목 테이블이 1차 근거,",
+        "감가 사유 요약은 2차 보조 근거로 취급됨.",
+        "• 하단 항목 테이블은 감가 산정의 근거 데이터로 고정되",
+        "며, 각 행은 “항목명/내용/감가액” 3요소를 필수로 포함",
+        "함.",
+        "항목명: 서비스에서 정의한 감가 분류 키(예: 외관/타이",
+        "어/실내 등)",
+        "내용: 딜러가 감가 사유를 구체화한 설명",
+        "감가액: 해당 항목에만 귀속되는 차감 금액(음수 표기 기",
+        "준 고정)",
+        "• 합계 행은 항목별 감가액의 산술 합으로 산출되며, 합",
+        "계 ≠ 제안 감가 금액인 경우 “비정상 감가 제안”으로 판단",
+        "되어 재협의/확정 처리 기준 데이터로 사용 불가 상태로",
+        "분기됨.",
+        "• 본 이력은 “제안 전송 시점”에 확정 저장된 레코드이며,",
+        "화면 내에서 수정 불가."
+      ],
+      "matched_block_ids": [
+        "detail-summary",
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "재협의 요청 내역",
+      "lines": [
+        "본 영역은 1번 감가 제안에 대해 판매자 또는 딜러가 재",
+        "협의 요청을 생성한 응답 레코드를 누적 노출하는 영역이",
+        "며, “재협의” 상태의 직접 원인 데이터로 사용됨.",
+        "재협의 블록은 요청 주체/요청 시각/요청 메시지/첨부 증",
+        "빙을 한 묶음으로 고정 포함하며, 동일 거래 내 재협의가",
+        "반복될 경우 블록이 누적됨.",
+        "“판매자 재협의 요청” 문구와 본문은 판매자가 입력한 원",
+        "문을 보존하는 값이며, 운영 개입 시에도 원문 변경 불가",
+        "가 전제되어야 로그/분쟁 근거로 성립함.",
+        "우측/하단의 금액 표시는 재협의 단계에서 “판매자가 원",
+        "하는 목표 금액” 또는 “판매자 주장 기준 거래가”로 해석",
+        "되는 보조 값이며, 시스템 정책상 이 값은 “확정 금액”이",
+        "아니라 재협의 판단을 위한 주장 데이터로 저장됨(최종",
+        "확정은 별도 승인 이벤트에서만 발생).",
+        "첨부 파일은 재협의 주장에 대한 증빙으로, 파일 목록은",
+        "서버 저장 원본을 링크로 노출하며, 다운로드는 가능하나",
+        "수정/삭제는 불가 상태로 유지됨",
+        "본 영역의 최신 블록이 존재하는 동안 거래 상태는 “재협",
+        "의”로 유지되며, 재협의가 해소되어 판매자 승인 확정 이",
+        "벤트가 발생하면 “최종 확정 이력”이 생성되고, 그 시점부",
+        "터 본 영역은 조회만 가능(신규 블록 생성 불가)"
+      ],
+      "matched_block_ids": [
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "detail-summary",
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2"
+        ]
+      }
+    ]
+  }
+}

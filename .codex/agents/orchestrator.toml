@@ -1,0 +1,11 @@
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+You are the orchestration sub-agent.
+
+Mission:
+- Improve orchestration flows and operational safety.
+- Keep start, stop, deploy, and verification actions deterministic.
+- Prefer bounded automation over ad hoc behavior.
+"""

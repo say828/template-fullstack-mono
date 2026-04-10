@@ -1,0 +1,385 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "dealer",
+  "screen_code": "DL_023",
+  "screen_name": "감가금액입력",
+  "page_number": 24,
+  "source_spec": "sdd/01_planning/02_screen/ir/dealer/dealer_screen_spec.pdf",
+  "surface_id": "page-024-surface-01",
+  "primary_route": "/dealer/transactions/:vehicleId/depreciation",
+  "access": "role:DEALER",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "dealer-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "dealer-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/dealer/DL_023",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/dealer/DL_023/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/dealer/DL_023/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/dealer/DL_023/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/dealer/DL_023/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "감가 항목 입력 영역",
+      "lines": [
+        "딜러가 감가 사유를 항목 단위로 구조화하여 제안하는 핵",
+        "심 입력 영역",
+        "각 항목은 개별 감가 사유로 서버에 저장되며, 모든 항목",
+        "의 합산값이 거래 금액 조정의 근거됨.",
+        "각 행은 독립적인 감가 객체로 저장됨",
+        "항목·내용·감가금액 중 하나라도 누락되면 해당 항목 전",
+        "체 무효 처리",
+        "감가 금액은 0 초과 정수, 소수·음수·문자 입력 불가",
+        "행 삭제 시 해당 항목은 서버 전송 대상에서 제외됨",
+        "감가 항목 금액 변경 시 총 감가 금액 및 최종 거래 예상",
+        "금액 즉시 재계산",
+        "최종 거래 예상 금액은 항상 낙찰가 이상이 될 수 없음"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "항목 추가",
+      "lines": [
+        "클릭 시 동일 구조 입력 행 동적 생성",
+        "최대 10개 항목까지 추가 가능",
+        "10개 초과 시 더 이상 생성 불가"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "첨부 파일",
+      "lines": [
+        "감가 근거 증빙 자료 업로드",
+        "최대 5개, 파일당 10MB, 형식: PDF / JPG / PNG",
+        "서버 저장 후 감가 제안 데이터와 함께 판매자에게 전달"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "감가 사유",
+      "lines": [
+        "감가 협의 전체 사유 서술 영역",
+        "미입력 시 제출 불가",
+        "판매자 승인 판단의 핵심 근거 데이터"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "금액 계산 영역",
+      "lines": [
+        "낙찰가: 경매 종료 시 확정된 원 거래 금액",
+        "총 감가 금액: 모든 감가 항목 금액 합산 (항상 음수 표현)",
+        "최종 거래 예상 금액 = 낙찰가 − 총 감가 금액",
+        "계산은 모든 입력 변경 시 즉시 반영, 서버 제출 전 클라이",
+        "언트·서버 양측에서 동일 로직 검증 수행."
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-6",
+      "number": "6",
+      "heading": "취소",
+      "lines": [
+        "클릭 시 모든 입력값은 폐기 되며, 팝업 종료",
+        "거래 상태 변화 없음"
+      ],
+      "matched_block_ids": [
+        "supporting-panel"
+      ],
+      "match_method": "order-fallback"
+    },
+    {
+      "id": "REQ-7",
+      "number": "7",
+      "heading": "제안하기",
+      "lines": [
+        "딜러의 감가 협의 요청을 거래 흐름에 반영하는 결정 버",
+        "튼",
+        "클릭 시 입력 데이터 서버 검증 후 감가 제안 데이터 저장",
+        "처리",
+        "거래 상태 → 감가 협의 대기",
+        "판매자에게 감가 협의 알림 발송",
+        "거래 화면의 다음 단계 활성화"
+      ],
+      "matched_block_ids": [
+        "screen-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-6",
+        "block_ids": [
+          "supporting-panel"
+        ],
+        "match_method": "order-fallback"
+      },
+      {
+        "requirement_id": "REQ-7",
+        "block_ids": [
+          "screen-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": [
+          "REQ-3",
+          "REQ-7"
+        ]
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2",
+          "REQ-4",
+          "REQ-5"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": [
+          "REQ-6"
+        ]
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

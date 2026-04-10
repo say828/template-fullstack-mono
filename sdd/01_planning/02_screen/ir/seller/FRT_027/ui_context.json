@@ -1,0 +1,340 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "seller",
+  "screen_code": "FRT_027",
+  "screen_name": "상세보기(감가협의후)",
+  "page_number": 28,
+  "source_spec": "sdd/01_planning/02_screen/ir/seller/seller_screen_spec.pdf",
+  "surface_id": "page-028-surface-01",
+  "primary_route": "/seller/vehicles/:vehicleId/detail/depreciation-completed",
+  "access": "role:SELLER",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/web/src/app/App.tsx",
+    "shared_shell_kind": "seller-app-shell",
+    "header_kind": "app-secondary-header",
+    "bottom_nav_kind": "seller-bottom-nav-or-tab-shell"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/seller/FRT_027",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/seller/FRT_027/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/seller/FRT_027/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/seller/FRT_027/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/seller/FRT_027/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 9,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "hero media",
+      "depreciation completed summary",
+      "vehicle identity",
+      "depreciation result",
+      "photo strip",
+      "trade progress",
+      "recent activity",
+      "bottom nav"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "hero-media",
+        "token": "hero media",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "depreciation-completed-summary",
+        "token": "depreciation completed summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "vehicle-identity",
+        "token": "vehicle identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "depreciation-result",
+        "token": "depreciation result",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "photo-strip",
+        "token": "photo strip",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "trade-progress",
+        "token": "trade progress",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "recent-activity",
+        "token": "recent activity",
+        "row_start": 8,
+        "row_end": 8,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 8,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "bottom-nav",
+        "token": "bottom nav",
+        "row_start": 9,
+        "row_end": 9,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 9,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "감가 협의 결과 패널",
+      "lines": [
+        "감가 협의가 서버 기준으로 완료 상태로 확정된 거래의",
+        "요약 결과 데이터가 로드됨.",
+        "기존 낙찰가, 최종 감가 금액, 최종 거래 금액, 선정 딜러",
+        "정보가 정산 기준 원본 데이터로 고정 노출됨.",
+        "본 패널 노출 시점부터 감가 협의 관련 기능은 전면 종료",
+        "되며, 감가 협의 이전 단계로의 복귀는 불가 상태로 유지",
+        "됨.",
+        "감가 내용 확인 버튼 클릭 시 감가 협의 상세 화면으로 전",
+        "환(FRT_028)되며, 확정된 감가 항목·사유·금액·증빙 이",
+        "력 데이터가 읽기 전용으로 노출됨.",
+        "본 패널은 이후 딜러의 인도 일정 등록 트리거 발생 전까",
+        "지 유지되며, 딜러가 인도 일정 데이터를 등록하는 순간",
+        "해당 거래는 서버 기준으로 인도/정산 단계로 자동 전환",
+        "됨"
+      ],
+      "matched_block_ids": [
+        "header-action"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "header-action"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "hero-media",
+        "token": "hero media",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "depreciation-completed-summary",
+        "token": "depreciation completed summary",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "vehicle-identity",
+        "token": "vehicle identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "depreciation-result",
+        "token": "depreciation result",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "photo-strip",
+        "token": "photo strip",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "trade-progress",
+        "token": "trade progress",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "recent-activity",
+        "token": "recent activity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "bottom-nav",
+        "token": "bottom nav",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

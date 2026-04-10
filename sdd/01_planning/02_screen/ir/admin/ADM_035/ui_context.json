@@ -1,0 +1,312 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_035",
+  "screen_name": "판매자정산관리",
+  "page_number": 36,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-036-surface-01",
+  "primary_route": "/admin/settlements",
+  "access": "role:ADMIN",
+  "implementation_status": "implemented",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_035",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_035/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_035/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_035/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_035/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "screen action",
+      "filter bar",
+      "primary list",
+      "supporting panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "screen-action",
+        "token": "screen action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "filter-bar",
+        "token": "filter bar",
+        "row_start": 3,
+        "row_end": 3,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "primary-list",
+        "token": "primary list",
+        "row_start": 4,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 3,
+        "segments": [
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          },
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "필터/검색 컨트롤 + 상태 탭",
+      "lines": [
+        "정산 대상을 운영 관점으로 좁히기 위한 조회 조건 영역.",
+        "상태 탭(전체/정산 대기/정산 완료)은 정산 레코드의 상",
+        "태값을 기준으로 목록을 분기함. 정산 대기는 “딜러 송금",
+        "완료 확정”은 끝났으나 “판매자 지급 확정”이 아직 생성",
+        "되지 않은 정산 건을 의미함. 정산 완료는 판매자 지급이",
+        "확정되어 정산 완료 일시/확정자가 존재하는 건을 의미",
+        "함.",
+        "기간 필터(오늘/최근 7일/최근 30일/전체)는 목록의 기",
+        "준 일자 필드를 고정해 필터링함.",
+        "검색 입력은 “거래 ID / 차량번호 / 판매자 / 딜러” 키워드",
+        "탐색을 지원하는 형태로 노출됨. 부분일치 기준으로 서버",
+        "검색이 수행됨",
+        "초기화는 상태/기간/검색 조건을 기본값으로 되돌리고 1",
+        "페이지로 복귀시키는 트리거로 사용됨. 기본값은 화면 진",
+        "입 시점의 UI와 동일하게 상태=전체, 기간=전체, 검색=공",
+        "백으로 고정"
+      ],
+      "matched_block_ids": [
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "상단 집계(정산 운영 지표)",
+      "lines": [
+        "현재 필터 조건에 의해 산출된 “처리 대기 규모/완료 규",
+        "모/수익 규모”를 즉시 확인시키는 운영 집계 영역.",
+        "정산 대기(건)는 현재 필터 조건에서 상태가 정산 대기인",
+        "레코드 수를 표시함.",
+        "대기 총액(원)은 정산 대기 레코드의 정산액 합계를 의미",
+        "함. 합산 기준은 (3)의 정산액(A-B) 컬럼과 동일한 산식으",
+        "로 고정되어야 하며, 표기 단위(원/콤마)는 서비스 공통",
+        "포맷을 따름.",
+        "정산 완료(건)는 현재 필터 조건에서 상태가 정산 완료인",
+        "레코드 수를 표시함.",
+        "수수료 수익(원)은 현재 필터 조건에서 산출된 수수료 합",
+        "계로, (3)의 수수료(B:10%) 컬럼 합계를 의미함. 수수료",
+        "율(10%)은 “거래 수수료 정책”의 스냅샷을 의미"
+      ],
+      "matched_block_ids": [
+        "header",
+        "filter-bar"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "정산 목록(정산 단위 레코드 테이블)",
+      "lines": [
+        "정산 처리의 대상(정산 대기)과 이력(정산 완료)을 거래",
+        "단위로 조회하고 상세로 진입시키는 메인 테이블.",
+        "거래ID는 정산 레코드의 대표 키로 노출되며, 거래ID 포",
+        "맷은 TR-YYYYMMDDNNN 스냅샷으로 고정됨.",
+        "차량 정보는 거래 당시 기준 차량 스냅샷(모델/연식/주행",
+        "거리 등)이 요약 노출되며, 동일 판매자/딜러 간 다건 처",
+        "리 시 오인 방지 목적의 식별 보조값으로 사용됨.",
+        "판매자/딜러는 거래 당사자 표시명으로 노출되며, 정산",
+        "지급의 수신 주체(판매자)와 대금 납부 주체(딜러)의 쌍",
+        "을 확인시키는 필드로 유지됨.",
+        "송금액(A)은 딜러 송금완료 확정된 “거래 대금” 기준 금",
+        "액이며, 정산 산식의 기준값으로 사용됨. 통화 표기는 ₩",
+        "고정 및 콤마 포맷을 적용함.",
+        "수수료(B:10%)는 (A)에 수수료율을 적용한 금액이며, 화",
+        "면 표기상 음수(예: -₩3,200,000)로 노출되어 “차감 항",
+        "목”임을 직관적으로 고정함.",
+        "정산액(A-B)은 판매자에게 지급될 순지급액이며, A - 수",
+        "수료금액으로 산출된 확정값으로 노출됨. 정산 상세 화면",
+        "에서 지급 확정 시 이 값이 “지급금액”의 기준으로 사용되",
+        "며, 확정 이후에도 동일 값으로 고정.",
+        "상태는 정산 대기 / 정산 완료 태그로 시각 구분되며, 행",
+        "클릭 진입 후 상세 화면에서 수행 가능한 액션의 존재 여",
+        "부를 결정하는 분기 기준으로 사용됨.",
+        "최종 업데이트는 정산 레코드의 마지막 상태 변경 시각",
+        "(또는 마지막 수정 시각)으로 노출되며, 운영자가 “대기",
+        "장기화/지연”을 감지하는 기준값으로 사용됨.",
+        "상태가 정산대기 일경우 리스트행 클릭 시, (ADM_036)",
+        "화면을 호출하며, 상태가 정산완료 일경우 클릭 시,",
+        "(ADM_037) 화면을 호출함"
+      ],
+      "matched_block_ids": [
+        "primary-list"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "header",
+          "filter-bar"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "primary-list"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "screen-action",
+        "token": "screen action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "filter-bar",
+        "token": "filter bar",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "primary-list",
+        "token": "primary list",
+        "requirement_ids": [
+          "REQ-3"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      }
+    ]
+  }
+}

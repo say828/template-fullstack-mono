@@ -1,0 +1,436 @@
+{
+  "artifact_version": "0.4.0",
+  "service": "admin",
+  "screen_code": "ADM_026",
+  "screen_name": "감가협의상세(제안필요)",
+  "page_number": 27,
+  "source_spec": "sdd/01_planning/02_screen/ir/admin/admin_screen_spec.pdf",
+  "surface_id": "page-027-surface-01",
+  "primary_route": "/admin/depreciations/:vehicleId",
+  "access": "role:ADMIN",
+  "implementation_status": "partial",
+  "runtime_context": {
+    "runtime_entry": "client/admin/src/app/App.tsx",
+    "shared_shell_kind": "admin-shell",
+    "header_kind": "admin-topbar",
+    "bottom_nav_kind": "none"
+  },
+  "artifacts": {
+    "screen_dir_path": "sdd/01_planning/02_screen/ir/admin/ADM_026",
+    "ui_grid_path": "sdd/01_planning/02_screen/ir/admin/ADM_026/ui_grid.csv",
+    "ui_spec_path": "sdd/01_planning/02_screen/ir/admin/ADM_026/ui_spec.md",
+    "ui_img_path": "sdd/01_planning/02_screen/ir/admin/ADM_026/ui_img.png",
+    "ui_context_path": "sdd/01_planning/02_screen/ir/admin/ADM_026/ui_context.json"
+  },
+  "grid": {
+    "columns": 24,
+    "row_count": 8,
+    "ordered_tokens": [
+      "header",
+      "screen title",
+      "header action",
+      "detail hero",
+      "detail summary",
+      "detail identity",
+      "detail info",
+      "supporting panel",
+      "activity panel"
+    ],
+    "blocks": [
+      {
+        "id": "header",
+        "token": "header",
+        "row_start": 1,
+        "row_end": 1,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 1,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "screen-title",
+        "token": "screen title",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 1,
+        "column_end": 14,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 1,
+            "column_end": 14,
+            "width": 14
+          }
+        ]
+      },
+      {
+        "id": "header-action",
+        "token": "header action",
+        "row_start": 2,
+        "row_end": 2,
+        "column_start": 15,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 2,
+            "column_start": 15,
+            "column_end": 24,
+            "width": 10
+          }
+        ]
+      },
+      {
+        "id": "detail-hero",
+        "token": "detail hero",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 1,
+        "column_end": 16,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          },
+          {
+            "row": 4,
+            "column_start": 1,
+            "column_end": 16,
+            "width": 16
+          }
+        ]
+      },
+      {
+        "id": "detail-summary",
+        "token": "detail summary",
+        "row_start": 3,
+        "row_end": 4,
+        "column_start": 17,
+        "column_end": 24,
+        "segment_count": 2,
+        "segments": [
+          {
+            "row": 3,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          },
+          {
+            "row": 4,
+            "column_start": 17,
+            "column_end": 24,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "id": "detail-identity",
+        "token": "detail identity",
+        "row_start": 5,
+        "row_end": 5,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 5,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "detail-info",
+        "token": "detail info",
+        "row_start": 6,
+        "row_end": 6,
+        "column_start": 1,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 6,
+            "column_start": 1,
+            "column_end": 24,
+            "width": 24
+          }
+        ]
+      },
+      {
+        "id": "supporting-panel",
+        "token": "supporting panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 1,
+        "column_end": 12,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 1,
+            "column_end": 12,
+            "width": 12
+          }
+        ]
+      },
+      {
+        "id": "activity-panel",
+        "token": "activity panel",
+        "row_start": 7,
+        "row_end": 7,
+        "column_start": 13,
+        "column_end": 24,
+        "segment_count": 1,
+        "segments": [
+          {
+            "row": 7,
+            "column_start": 13,
+            "column_end": 24,
+            "width": 12
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "number": "1",
+      "heading": "헤더(화면 식별/이동)",
+      "lines": [
+        "화면 진입 맥락을 거래 단위로 고정하기 위한 헤더 영역",
+        "좌측 뒤로가기는 감가 협의 목록(이전 화면)으로 복귀되",
+        "는 내비게이션으로 처리됨",
+        "거래 식별값은 #TR-YYYYMMDDNNN 형태의 거래ID가",
+        "고정 노출됨"
+      ],
+      "matched_block_ids": [
+        "header",
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-2",
+      "number": "2",
+      "heading": "거래 화면 보기(프론트 상세 호출)",
+      "lines": [
+        "운영자가 동일 거래를 사용자(프론트) 관점의 거래 상세",
+        "페이지로 확인하기 위한 외부 호출 액션",
+        "클릭 시 프론트 거래 상세 URL이 새 창(새 탭) 으로 열림",
+        "- 호출 파라미터는 거래ID 기반으로 구성됨"
+      ],
+      "matched_block_ids": [
+        "detail-info"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-3",
+      "number": "3",
+      "heading": "거래 상세 정보(요약 고정 영역)",
+      "lines": [
+        "본 화면 내 모든 데이터의 기준 엔티티를 “거래ID”로 고정",
+        "하기 위한 요약 정보 영역",
+        "차량 정보: 거래 생성 시 확정된 차량 요약(모델/연식/주",
+        "행거리 등)으로, 감가 판단의 기준 컨텍스트로만 사용됨",
+        "거래 관계자: 판매자/딜러 식별 정보(표시명) 고정 노출,",
+        "협의 당사자 확인용 키",
+        "현재 상태: 감가 협의 단계 상태값(제안필요) 고정 노출",
+        "SLA: 감가 협의 단계의 경과/잔여 표기(D- / D+)로 노출",
+        "됨",
+        "- 기준 시점은 “감가 협의 대상 전환 시각(검차완료 전",
+        "환 또는 협의 시작 이벤트)” 중 정책 기준으로 산정됨",
+        "담당 관리자: 본 거래의 운영 담당자 표시"
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-4",
+      "number": "4",
+      "heading": "검차 리포트(감가 협의 판단 근거)",
+      "lines": [
+        "감가 제안이 등록되기 전 단계에서 참고해야 하는 검차",
+        "결과 요약 + 리포트 파일 고정 영역",
+        "평가사: 검차 결과를 작성한 평가사 식별 정보",
+        "검차 일시: 검차 일정 확정 레코드 기준 일시(YYYY-MM-",
+        "DD HH:MM)",
+        "외관 상태 / 사고 이력 / 침수 이력: 검차 결과 레코드의",
+        "선택값 요약",
+        "- “외관 상태”는 스크래치/판금 등 외관 결함 분류의",
+        "최종 선택값으로 노출됨",
+        "첨부 파일: 검차 리포트 파일 메타(파일명) 고정 노출",
+        "- 파일명은 업로드 시점의 원본 파일명에 따라 노출됨",
+        "리포트 다운로드는 검차 리포트 파일을 다운로드하는 액",
+        "션"
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-5",
+      "number": "5",
+      "heading": "감가 제안 이력(제안 미등록 상태 노출)",
+      "lines": [
+        "딜러 감가 제안 레코드의 존재 여부를 가장 직접적으로",
+        "증명하는 핵심 영역",
+        "상태=제안필요에서는 감가 제안 레코드가 없으므로 빈",
+        "상태 안내 UI로 고정 노출됨",
+        "- “딜러 감가 제안이 아직 등록되지 않음” 메시지 노출",
+        "- 운영자가 본 화면에서 감가 금액을 대신 입력/확정하",
+        "는 입력 UI는 미노출",
+        "본 영역에 데이터가 노출되는 시점은 “딜러 감가 제안 등",
+        "록 이벤트” 발생 이후이며, 등록 즉시 승인대기/재협의 등",
+        "다음 상태로 전환될 수 있음",
+        "전환 기준은 “판매자 응답”이 아니라 “딜러 제안 레코드",
+        "생성” 여부로 1차 구분됨"
+      ],
+      "matched_block_ids": [
+        "detail-summary"
+      ],
+      "match_method": "keyword"
+    },
+    {
+      "id": "REQ-6",
+      "number": "6",
+      "heading": "협의 이벤트 로그(이력 트래킹)",
+      "lines": [
+        "감가 협의 단계에서 발생한 주요 이벤트를 시간순으로 적",
+        "재/노출하는 로그 영역",
+        "각 로그 항목은 “이벤트명 + 발생일시” 조합으로 고정 노",
+        "출됨",
+        "제안필요 상태에서 노출 가능한 이벤트 예시",
+        "- 딜러 감가 제안 등록(발생 전이면 미노출)",
+        "- 검차 리포트 전송(검차 결과 등록 완료 이벤트)",
+        "로그는 상태 판단 근거로 사용되므로 최신 이벤트가 상단",
+        "에 노출되는 정렬(최신 우선) 고정 필요"
+      ],
+      "matched_block_ids": [
+        "activity-panel"
+      ],
+      "match_method": "keyword"
+    }
+  ],
+  "connections": {
+    "requirement_to_blocks": [
+      {
+        "requirement_id": "REQ-1",
+        "block_ids": [
+          "header",
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-2",
+        "block_ids": [
+          "detail-info"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-3",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-4",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-5",
+        "block_ids": [
+          "detail-summary"
+        ],
+        "match_method": "keyword"
+      },
+      {
+        "requirement_id": "REQ-6",
+        "block_ids": [
+          "activity-panel"
+        ],
+        "match_method": "keyword"
+      }
+    ],
+    "block_to_requirements": [
+      {
+        "block_id": "header",
+        "token": "header",
+        "requirement_ids": [
+          "REQ-1"
+        ]
+      },
+      {
+        "block_id": "screen-title",
+        "token": "screen title",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "header-action",
+        "token": "header action",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-hero",
+        "token": "detail hero",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-summary",
+        "token": "detail summary",
+        "requirement_ids": [
+          "REQ-1",
+          "REQ-3",
+          "REQ-4",
+          "REQ-5"
+        ]
+      },
+      {
+        "block_id": "detail-identity",
+        "token": "detail identity",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "detail-info",
+        "token": "detail info",
+        "requirement_ids": [
+          "REQ-2"
+        ]
+      },
+      {
+        "block_id": "supporting-panel",
+        "token": "supporting panel",
+        "requirement_ids": []
+      },
+      {
+        "block_id": "activity-panel",
+        "token": "activity panel",
+        "requirement_ids": [
+          "REQ-6"
+        ]
+      }
+    ]
+  }
+}

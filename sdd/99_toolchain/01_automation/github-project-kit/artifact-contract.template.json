@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "feature_specs_glob": "sdd/01_planning/01_feature/*_feature_spec.md",
+  "feature_todos_glob": "sdd/02_plan/01_feature/*_todos.md",
+  "source_artifact_globs": [
+    "sdd/01_planning/02_screen/**/*.pdf",
+    "sdd/01_planning/02_screen/guidelines/**/*.json"
+  ],
+  "screen_registry_globs": [
+    "sdd/01_planning/02_screen/ir/*/registry.json"
+  ],
+  "screen_task_statuses": [
+    "partial",
+    "unknown",
+    "not_implemented"
+  ],
+  "landing_exclude_prefixes": [],
+  "ir": {
+    "validate_command": "echo 'replace validate command' >&2",
+    "regenerate_command": "echo 'replace regenerate command' >&2"
+  },
+  "outputs": {
+    "task_catalog": "sdd/99_toolchain/01_automation/github-project-kit/task-catalog.json",
+    "task_sync_state": "sdd/99_toolchain/01_automation/github-project-kit/task-sync-state.json"
+  }
+}
