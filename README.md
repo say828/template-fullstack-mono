@@ -1,13 +1,14 @@
 # template-fullstack-mono
 
-`template-fullstack-mono`는 `client/web + client/admin + server + sdd`를 함께 가져가는 fullstack mono 템플릿이다.
+`template-fullstack-mono`는 `client/web + client/admin + server` payload를 제공하는 fullstack mono 템플릿이다.
+공용 `sdd`, agent harness, GitHub Project kit, shared policy/skill surface는 설치 시 `say828/agentic-core`에서 공급된다.
 
 ## 구성
 
 - `client/web`: customer-facing React + Vite surface
 - `client/admin`: admin React + Vite surface
 - `server`: FastAPI + SQLAlchemy backend
-- `sdd`: planning/build/verify/toolchain contract
+- `sdd/99_toolchain/01_automation/agentic-dev`: 템플릿 로컬 parity/bootstrap contract
 - `compose.yml`: `mysql + server + web + admin` local baseline
 
 ## 실행
@@ -35,6 +36,7 @@ pnpm --dir client/admin dev
 
 ## UI Parity
 
+`agentic-dev init`로 설치하면 먼저 `agentic-core`가 sync되고, 그 위에 이 템플릿 payload가 합쳐진다.
 기본 bootstrap 대상은 `web`이다.
 
 ```bash
@@ -60,11 +62,7 @@ npm run ui:parity:bootstrap
 5. route-gap / plan audit gate
 6. proof gate
 
-주요 산출물:
-
-- `sdd/02_plan/10_test/ui_parity_contract.yaml`
-- `sdd/03_verify/10_test/ui_parity/web_agentic_dev_latest.json`
-- `sdd/03_verify/10_test/ui_parity/web_agentic_admin_latest.json`
+주요 parity 산출물은 설치된 repo에서 실행 후 생성된다.
 
 ## agentic-dev 설치 흐름
 
@@ -78,8 +76,9 @@ CLI가 하는 일:
 
 1. GitHub의 공개 `say828/template-*` 레포 목록 조회
 2. 템플릿 선택
-3. 선택한 레포를 새 디렉터리에 복제
-4. `.env.example -> .env` 자동 생성
-5. `pnpm install` 자동 실행
-6. default target(`web`) 기준 Playwright Chromium 설치
-7. default target(`web`) 기준 parity bootstrap 실행
+3. 선택한 레포 payload를 새 디렉터리에 복제
+4. `say828/agentic-core`를 sync
+5. `.env.example -> .env` 자동 생성
+6. `pnpm install` 자동 실행
+7. default target(`web`) 기준 Playwright Chromium 설치
+8. default target(`web`) 기준 parity bootstrap 실행
