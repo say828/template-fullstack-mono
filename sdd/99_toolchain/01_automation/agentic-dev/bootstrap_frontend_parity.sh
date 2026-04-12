@@ -52,7 +52,7 @@ preview_pid=""
 
 cleanup() {
   if [[ -n "${preview_pid}" ]] && kill -0 "${preview_pid}" >/dev/null 2>&1; then
-    kill "${preview_pid}" >/dev/null 2>&1 || true
+    kill -- "-${preview_pid}" >/dev/null 2>&1 || kill "${preview_pid}" >/dev/null 2>&1 || true
     wait "${preview_pid}" >/dev/null 2>&1 || true
   fi
 }
@@ -63,7 +63,11 @@ bash "${script_dir}/init_frontend_parity.sh" "${repo_root}" "${frontend_target}"
 cd "${repo_root}"
 mkdir -p "$(dirname "${preview_log}")"
 bash "${script_dir}/run_frontend_target.sh" build "${repo_root}" "${frontend_target}"
-npm --prefix "${target_dir}" run preview >"${preview_log}" 2>&1 &
+if command -v setsid >/dev/null 2>&1; then
+  setsid npm --prefix "${target_dir}" run preview >"${preview_log}" 2>&1 &
+else
+  npm --prefix "${target_dir}" run preview >"${preview_log}" 2>&1 &
+fi
 preview_pid="$!"
 for _ in $(seq 1 30); do
   if curl -fsS "${preview_url}" >/dev/null 2>&1; then
