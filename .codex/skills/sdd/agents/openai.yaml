@@ -1,4 +1,0 @@
-interface:
-  display_name: "SDD Development"
-  short_description: "Use SDD-first flow with schema parity, regression scope, and staged rollout gates"
-  default_prompt: "Use $sdd to handle this development task through sdd planning, build, verify, and operate, including regression scope selection, schema parity checks for persistence-affecting work, and staged DEV-first validation when multiple environments exist."

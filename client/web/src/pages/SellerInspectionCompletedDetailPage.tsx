@@ -1,1 +1,0 @@
-export { SellerInspectionCompletedDetailPage } from "./SellerInspectionPendingDetailPage";

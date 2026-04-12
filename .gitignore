@@ -1,67 +1,28 @@
-# server
+# frontend
+node_modules/
+client/web/node_modules/
+client/web/dist/
+client/web/dist-debug/
+client/web/*.tsbuildinfo
+
+# python
 server/.venv/
-server/.reports/
-server/data/storage/
 server/.pytest_cache/
 server/.mypy_cache/
 server/__pycache__/
 server/**/__pycache__/
 server/**/*.pyc
 
-# python bytecode
-.codex/**/__pycache__/
-.codex/**/*.pyc
-scripts/**/__pycache__/
-scripts/**/*.pyc
-sdd/**/__pycache__/
-sdd/**/*.pyc
-
-# frontend
-node_modules/
-frontend/node_modules/
-frontend/dist/
-frontend/*.tsbuildinfo
-frontend/src/**/*.js
-frontend/src/**/*.js.map
-frontend/tools/ui-diff/output/
-client/app/node_modules/
-client/app/dist/
-client/app/*.tsbuildinfo
-client/admin/node_modules/
-client/admin/dist/
-client/admin/dist-debug/
-client/admin/*.tsbuildinfo
-client/web/node_modules/
-client/web/dist/
-client/web/dist-debug/
-client/web/*.tsbuildinfo
-client/landing/node_modules/
-client/landing/dist/
-client/landing/*.tsbuildinfo
-client/shared/node_modules/
-
 # local
 .env
 .env.local
 .DS_Store
-.venv/
 .pnpm-store/
-.agent/
-backend/storage/
 
-# ui parity
-specs/tests/results/ui_parity/
-specs/tests/results/ui_parity_latest.json
-specs/03_tests/results/ui_parity/
-specs/03_tests/results/ui_parity_latest.json
-sdd/04_verify/02_test_evidence/ui_parity/[0-9]*/
-sdd/04_verify/02_test_evidence/ui_parity/reference/
-sdd/04_verify/02_test_evidence/ui_parity/reference_pages/
-sdd/04_verify/02_test_evidence/ui_parity/source_pages/
-
-# terraform
-infra/terraform/**/.terraform/
-infra/terraform/**/*.tfstate
-infra/terraform/**/*.tfstate.*
-infra/terraform/**/crash.log
-infra/terraform/**/*.tfplan
+# generated verification artifacts
+sdd/**/__pycache__/
+sdd/**/*.pyc
+sdd/03_verify/10_test/ui_parity/[0-9]*/
+sdd/03_verify/10_test/ui_parity/reference/
+sdd/03_verify/10_test/ui_parity/reference_pages/
+sdd/03_verify/10_test/ui_parity/source_pages/

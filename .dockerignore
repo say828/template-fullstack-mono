@@ -1,12 +1,7 @@
 .git
 .github
-.claude
-.codex
-CLAUDE.md
 README.md
 compose.yml
-infra
-scripts
 sdd
 server
 node_modules

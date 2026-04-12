@@ -1,30 +1,20 @@
 [
   {
-    "id": "TWEB_001",
+    "id": "WEB_HOME",
     "route": "/",
-    "binding": "direct",
-    "notes": ["Customer-facing landing route."],
-    "tags": ["landing"]
+    "notes": ["Generic landing route for a new fullstack workspace."],
+    "tags": ["template", "web"]
   },
   {
-    "id": "TWEB_002",
-    "route": "/login",
-    "binding": "direct",
-    "notes": ["Public login route."],
-    "tags": ["auth"]
+    "id": "WEB_SDD",
+    "route": "/sdd",
+    "notes": ["Documents how the repo should evolve from SDD artifacts."],
+    "tags": ["template", "sdd"]
   },
   {
-    "id": "TWEB_003",
-    "route": "/signup",
-    "binding": "direct",
-    "notes": ["Role selection before signup."],
-    "tags": ["auth"]
-  },
-  {
-    "id": "TWEB_004",
-    "route": "/support/notices",
-    "binding": "direct",
-    "notes": ["Public support notice list."],
-    "tags": ["support"]
+    "id": "WEB_RUNTIME",
+    "route": "/runtime",
+    "notes": ["Placeholder runtime route for backend connectivity work."],
+    "tags": ["template", "runtime"]
   }
 ]

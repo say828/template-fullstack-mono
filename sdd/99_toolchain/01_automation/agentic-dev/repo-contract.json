@@ -21,17 +21,6 @@
         "route_gap_output": "sdd/02_plan/99_generated/from_planning/ui_parity/ui_parity_web_route_gap_report.json",
         "route_gap_markdown_output": "sdd/02_plan/99_generated/from_planning/ui_parity/ui_parity_web_route_gap_report.md",
         "proof_output": "sdd/03_verify/10_test/ui_parity/web_agentic_dev_latest.json"
-      },
-      "admin": {
-        "dir": "client/admin",
-        "adapter_path": "client/admin/scripts/ui-parity-admin-adapter.mjs",
-        "screens_path": "client/admin/src/lib/specScreens.json",
-        "routes_path": "client/admin/src/lib/specRouteCatalog.json",
-        "preview_url": "http://127.0.0.1:4174",
-        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_admin_contract.yaml",
-        "route_gap_output": "sdd/02_plan/99_generated/from_planning/ui_parity/ui_parity_admin_route_gap_report.json",
-        "route_gap_markdown_output": "sdd/02_plan/99_generated/from_planning/ui_parity/ui_parity_admin_route_gap_report.md",
-        "proof_output": "sdd/03_verify/10_test/ui_parity/web_agentic_admin_latest.json"
       }
     }
   },
@@ -57,22 +46,20 @@
       "project": [
         "pnpm install --frozen-lockfile",
         "pnpm --dir client/web build",
-        "pnpm --dir client/admin build"
+        "cd server && uv run --extra dev pytest -q"
       ],
       "specs": [
         "pnpm install --frozen-lockfile",
-        "pnpm --dir client/web build",
-        "pnpm --dir client/admin build"
+        "pnpm --dir client/web build"
       ],
       "architecture": [
         "pnpm install --frozen-lockfile",
         "pnpm --dir client/web build",
-        "pnpm --dir client/admin build"
+        "cd server && uv run --extra dev pytest -q"
       ],
       "ui": [
         "pnpm install --frozen-lockfile",
-        "pnpm --dir client/web build",
-        "pnpm --dir client/admin build"
+        "pnpm --dir client/web build"
       ],
       "api": [
         "cd server && uv run --extra dev pytest -q"
@@ -80,19 +67,16 @@
       "runtime": [
         "pnpm install --frozen-lockfile",
         "pnpm --dir client/web build",
-        "pnpm --dir client/admin build",
         "cd server && uv run --extra dev pytest -q"
       ],
       "ci": [
         "pnpm install --frozen-lockfile",
         "pnpm --dir client/web build",
-        "pnpm --dir client/admin build",
         "cd server && uv run --extra dev pytest -q"
       ],
       "gitops": [
         "pnpm install --frozen-lockfile",
         "pnpm --dir client/web build",
-        "pnpm --dir client/admin build",
         "cd server && uv run --extra dev pytest -q"
       ],
       "security": [
@@ -101,7 +85,7 @@
       "default": [
         "pnpm install --frozen-lockfile",
         "pnpm --dir client/web build",
-        "pnpm --dir client/admin build"
+        "cd server && uv run --extra dev pytest -q"
       ]
     },
     "delivery": {
@@ -117,7 +101,7 @@
   "notes": [
     "template-fullstack-mono keeps the canonical agentic-dev contract under sdd/99_toolchain/01_automation/agentic-dev to match the shared template layout.",
     "Route-gap and proof artifacts follow the final-only SDD verify root under sdd/03_verify/10_test/ui_parity.",
-    "Frontend targets map to client/web and client/admin. Public onboarding/support and seller/dealer workflow routes are unified under client/web while admin remains separate.",
+    "Frontend bootstrap targets only client/web in this template.",
     "DEV deploy is intentionally workflow-only; repo-local manual recovery scripts are not part of the supported path."
   ]
 }
