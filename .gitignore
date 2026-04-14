@@ -18,6 +18,9 @@ server/**/*.pyc
 .env.local
 .DS_Store
 .pnpm-store/
+.agentic-dev/generated/
+sdd/99_toolchain/01_automation/github-project-kit/task-catalog.json
+sdd/99_toolchain/01_automation/github-project-kit/task-sync-state.json
 
 # generated verification artifacts
 sdd/**/__pycache__/
