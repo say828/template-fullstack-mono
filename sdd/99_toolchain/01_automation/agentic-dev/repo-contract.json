@@ -99,9 +99,9 @@
     "proof_output": "sdd/03_verify/10_test/ui_parity/web_agentic_dev_latest.json"
   },
   "notes": [
-    "template-fullstack-mono keeps the canonical agentic-dev contract under sdd/99_toolchain/01_automation/agentic-dev to match the shared template layout.",
-    "Route-gap and proof artifacts follow the final-only SDD verify root under sdd/03_verify/10_test/ui_parity.",
-    "Frontend bootstrap targets only client/web in this template.",
+    "The canonical agentic-dev contract lives under sdd/99_toolchain/01_automation/agentic-dev to match the shared template layout.",
+    "Route-gap artifacts are generated under sdd/02_plan/99_generated/from_planning/ui_parity and proof artifacts remain under sdd/03_verify/10_test/ui_parity.",
+    "Frontend bootstrap targets only client/web in this fullstack mono layout.",
     "DEV deploy is intentionally workflow-only; repo-local manual recovery scripts are not part of the supported path."
   ]
 }

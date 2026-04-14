@@ -9,51 +9,18 @@
     "canonical_targets_dir": "sdd/02_plan"
   },
   "frontend": {
-    "default_target": "platform",
+    "default_target": "web",
     "targets": {
-      "platform": {
-        "dir": "web/platform",
-        "adapter_path": "web/platform/scripts/ui-parity-platform-adapter.mjs",
-        "screens_path": "web/platform/src/lib/specScreens.json",
-        "routes_path": "web/platform/src/lib/specRouteCatalog.json",
-        "preview_url": "http://127.0.0.1:4301",
-        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_platform_contract.yaml",
-        "route_gap_output": "sdd/03_verify/10_test/ui_parity/platform_route_gap_latest.json",
-        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/platform_route_gap_latest.md",
-        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_platform_agentic_dev_latest.json"
-      },
-      "mobile": {
-        "dir": "web/mobile",
-        "adapter_path": "web/mobile/scripts/ui-parity-mobile-adapter.mjs",
-        "screens_path": "web/mobile/src/lib/specScreens.json",
-        "routes_path": "web/mobile/src/lib/specRouteCatalog.json",
-        "preview_url": "http://127.0.0.1:4302",
-        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_mobile_contract.yaml",
-        "route_gap_output": "sdd/03_verify/10_test/ui_parity/mobile_route_gap_latest.json",
-        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/mobile_route_gap_latest.md",
-        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_mobile_agentic_dev_latest.json"
-      },
-      "admin": {
-        "dir": "web/admin",
-        "adapter_path": "web/admin/scripts/ui-parity-admin-adapter.mjs",
-        "screens_path": "web/admin/src/lib/specScreens.json",
-        "routes_path": "web/admin/src/lib/specRouteCatalog.json",
-        "preview_url": "http://127.0.0.1:4400",
-        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_admin_contract.yaml",
-        "route_gap_output": "sdd/03_verify/10_test/ui_parity/admin_route_gap_latest.json",
-        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/admin_route_gap_latest.md",
-        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_admin_agentic_dev_latest.json"
-      },
-      "landing": {
-        "dir": "web/landing",
-        "adapter_path": "web/landing/scripts/ui-parity-landing-adapter.mjs",
-        "screens_path": "web/landing/src/lib/specScreens.json",
-        "routes_path": "web/landing/src/lib/specRouteCatalog.json",
-        "preview_url": "http://127.0.0.1:4300",
-        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_landing_contract.yaml",
-        "route_gap_output": "sdd/03_verify/10_test/ui_parity/landing_route_gap_latest.json",
-        "route_gap_markdown_output": "sdd/03_verify/10_test/ui_parity/landing_route_gap_latest.md",
-        "proof_output": "sdd/03_verify/10_test/ui_parity/templates_landing_agentic_dev_latest.json"
+      "web": {
+        "dir": "client/web",
+        "adapter_path": "client/web/scripts/ui-parity-app-adapter.mjs",
+        "screens_path": "client/web/src/lib/specScreens.json",
+        "routes_path": "client/web/src/lib/specRouteCatalog.json",
+        "preview_url": "http://127.0.0.1:4173",
+        "parity_contract_path": "sdd/02_plan/10_test/templates/ui_parity_web_contract.yaml",
+        "route_gap_output": "sdd/02_plan/99_generated/from_planning/ui_parity/ui_parity_web_route_gap_report.json",
+        "route_gap_markdown_output": "sdd/02_plan/99_generated/from_planning/ui_parity/ui_parity_web_route_gap_report.md",
+        "proof_output": "sdd/03_verify/10_test/ui_parity/web_agentic_dev_latest.json"
       }
     }
   },
@@ -61,15 +28,80 @@
     "plan_audit": "bash sdd/99_toolchain/01_automation/agentic-dev/run_frontend_target.sh route_gap .",
     "build": "bash sdd/99_toolchain/01_automation/agentic-dev/run_frontend_target.sh build .",
     "proof": "bash sdd/99_toolchain/01_automation/agentic-dev/run_frontend_target.sh proof .",
-    "deploy_dev": "echo 'replace deploy_dev command' >&2",
-    "verify_dev": "echo 'replace verify_dev command' >&2"
+    "deploy_dev": "echo 'Template repo does not ship a deploy workflow.' >&2; exit 1",
+    "verify_dev": "test -f \"$PWD/sdd/03_verify/10_test/ui_parity/web_agentic_dev_latest.json\" && echo dev-verify-ok"
+  },
+  "agentic": {
+    "execution": {
+      "claim_mode": "pm_dispatch",
+      "dynamic_concurrency": true,
+      "overlap_policy": "residual_issue",
+      "lease_ttl_minutes": 120,
+      "resource_watermarks": {
+        "min_free_ram_bytes": 4294967296,
+        "max_load_per_cpu": 1.0
+      }
+    },
+    "validation_profiles": {
+      "project": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build",
+        "cd server && uv run --extra dev pytest -q"
+      ],
+      "specs": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build"
+      ],
+      "architecture": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build",
+        "cd server && uv run --extra dev pytest -q"
+      ],
+      "ui": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build"
+      ],
+      "api": [
+        "cd server && uv run --extra dev pytest -q"
+      ],
+      "runtime": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build",
+        "cd server && uv run --extra dev pytest -q"
+      ],
+      "ci": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build",
+        "cd server && uv run --extra dev pytest -q"
+      ],
+      "gitops": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build",
+        "cd server && uv run --extra dev pytest -q"
+      ],
+      "security": [
+        "cd server && uv run --extra dev pytest -q"
+      ],
+      "default": [
+        "pnpm install --frozen-lockfile",
+        "pnpm --dir client/web build",
+        "cd server && uv run --extra dev pytest -q"
+      ]
+    },
+    "delivery": {
+      "dev_merge": "auto_after_green",
+      "prod_merge": "auto_after_green",
+      "prod_release_gate": "manual_argocd_sync_ack"
+    }
   },
   "artifacts": {
-    "route_gap_output": "sdd/03_verify/10_test/ui_parity/platform_route_gap_latest.json",
-    "proof_output": "sdd/03_verify/10_test/ui_parity/replace_agentic_dev_latest.json"
+    "route_gap_output": "sdd/02_plan/99_generated/from_planning/ui_parity/ui_parity_web_route_gap_report.json",
+    "proof_output": "sdd/03_verify/10_test/ui_parity/web_agentic_dev_latest.json"
   },
   "notes": [
-    "Replace the commands and proof output path after cloning the template.",
-    "plan_audit is expected to generate and gate a route-gap report before proof."
+    "The canonical agentic-dev contract lives under sdd/99_toolchain/01_automation/agentic-dev to match the shared template layout.",
+    "Route-gap artifacts are generated under sdd/02_plan/99_generated/from_planning/ui_parity and proof artifacts remain under sdd/03_verify/10_test/ui_parity.",
+    "Frontend bootstrap targets only client/web in this fullstack mono layout.",
+    "DEV deploy is intentionally workflow-only; repo-local manual recovery scripts are not part of the supported path."
   ]
 }
